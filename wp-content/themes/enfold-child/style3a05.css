@@ -1,0 +1,99 @@
+/*
+Theme Name: Enfold Child
+Description: A <a href='http://codex.wordpress.org/Child_Themes'>Child Theme</a> for the Enfold Wordpress Theme. If you plan to do a lot of file modifications we recommend to use this Theme instead of the original Theme. Updating wil be much easier then.
+Version: 1.0
+Author: Kriesi
+Author URI: http://www.kriesi.at
+Template: enfold
+*/
+
+
+
+/*Add your own styles here:*/
+
+#bbpress-forums .bbp-forums-list ul > li {
+display: inline;
+}
+
+body .bbp_keymaster  {
+    background:  url(../../uploads/2016/10/ANGLE.png) top right no-repeat !important; 
+}
+
+div.bbp-reply-author::before {
+	left: 98px !important;
+}
+
+div.bbp-reply-content {
+	border-width: 1px !important;
+}
+
+.d4p-bbt-quote-block {
+	border: 0px !important;
+}
+.d4p-bbt-quote-link {
+	font-size:10px !important;
+}
+
+#forum-sidebar-button-full-width .avia-button.avia-size-medium {
+	width: 100% !important;
+}
+.pull-right {
+	float: right !important;
+}
+
+#iframe_container .container{
+	width: 100% !important;
+	
+	padding: 0 !important;
+	max-width: 100% !important;
+	
+}
+
+#iframe_container .container iframe {
+	width: 100% !important;
+	overflow: hidden !important;
+}
+#tickets_iframe {
+	height: 700px !important;
+}
+/*
+.av-language-switch-item {
+	display: none !important;
+}
+*/
+#shop_trio_image_container img {
+	image-rendering: auto !important;
+}
+/**
+* REGOLE AD HOC per SEO
+**/
+h1 {
+	font-size: 22px
+}
+h2 {
+	font-size: 20px
+}
+h3 {
+	font-size: 18px
+}
+h4 {
+	font-size: 15px
+}
+/**
+* REGOLE PER MOBILE CRISTINA
+**/
+@media screen and (min-width: 768px){
+.no-desktop-tablet{
+		display:none !important;
+	}
+}
+.marginmaxbutton {
+margin:10px !important;
+}
+.maxbutton-2.maxbutton.maxbutton-cta-core-ita {
+margin:10px !important;
+}
+
+body .column-top-margin {
+	margin-top: 0px !important;
+}

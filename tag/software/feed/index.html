@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>software &#8211; FABtotum</title>
+	<atom:link href="https://www.fabtotum.com/tag/software/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.fabtotum.com</link>
+	<description></description>
+	<lastBuildDate>Tue, 31 Jul 2018 12:39:40 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.8</generator>
+	<item>
+		<title>FAB UI, the FABtotum user interface.</title>
+		<link>https://www.fabtotum.com/fab-ui-the-fabtotum-user-interface/</link>
+		<pubDate>Mon, 12 May 2014 12:46:18 +0000</pubDate>
+		<dc:creator><![CDATA[Marco]]></dc:creator>
+				<category><![CDATA[Fabtotum Development]]></category>
+		<category><![CDATA[Fabtotum Team]]></category>
+		<category><![CDATA[Indiegogo]]></category>
+		<category><![CDATA[hardware]]></category>
+		<category><![CDATA[software]]></category>
+
+		<guid isPermaLink="false">http://blog.fabtotum.com/?p=451</guid>
+		<description><![CDATA[<div></div>
+<p>A while ago we talked about the FABtotum User Interface. Today we&#8217;re back on the topic to discuss some of the features of the FAB UI. You may have seen many 3d printers web interfaces, but how many multipurpose personal fabrication user interfaces? None? so did we before starting this project. In the Alpha version [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.fabtotum.com/fab-ui-the-fabtotum-user-interface/">FAB UI, the FABtotum user interface.</a> appeared first on <a rel="nofollow" href="https://www.fabtotum.com">FABtotum</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<div></div><p style="text-align: justify;">A while ago we talked about the FABtotum User Interface. Today we&#8217;re back on the topic to discuss some of the features of the FAB UI.<br />
+You may have seen many 3d printers web interfaces, but how many multipurpose personal fabrication user interfaces? None? so did we before starting this project.</p>
+<p style="text-align: justify;">In the Alpha version of the personal fabricator there was simply <em>no</em> user interface. to print you had to rely on external software like Pronterface to print, a processing script to scan on the PC.<br />
+The main challenge we faced with defining the FAB UI was to answer the following questions:</p>
+<ul style="text-align: justify;">
+<li>How do you provide a integrated panel to assist you seamlessly during all the personal fabrication process?</li>
+<li>How do you do that without making the interface too complex or alienating the user?</li>
+</ul>
+<p style="text-align: left;"><img class="img-responsive aligncenter" src="http://www.fabtotum.com/wp-content/uploads/2014/05/FAB-UI-1024x367.png" alt="FAB UI" /><strong>Setup Wizard<br />
+</strong>Once the FABtotum starts for the first time, the user is asked to set it up selecting a wifi network, user &amp; password, and other things.<br />
+The informations provided (like email, user etc) are saved locally on the FABtotum SD card and are used to identify the owner.The email in particular will come handy in future updates.</p>
+<p style="text-align: justify;"><strong>User Login<br />
+</strong>A log in is required for safety and security purposes.<br />
+Safety because someone in your network could just access, push a botton and crush your hand while you are adjusting an object to scan in another room, Security because your local file database, as well as your informations or projects should not be shared unless you want to.<br />
+This makes also perfect sense if you think about connecting the FABtotum to the internet and allowing remote logins.</p>
+<p style="text-align: justify;"><strong>The Dashboard<br />
+</strong>The Dashboard is the first page you see after loggin in.<br />
+Current tasks and previous ones are saved here. The dashboard can be costumized by changing the position of the tables. Plugins (see below) can alter or add elements to the dashboard as well. Right now we are sticking to the &#8220;less is more&#8221; principle, but you might as well fill the page with everything you have or you develop later.</p>
+<p style="text-align: justify;">
+<p style="text-align: justify;"><strong>Scan<br />
+</strong>The scan menu is actually a section of the UI where you can select more than one scanning method. you can find some insights of those methods <a title="here" href="http://blog.fabtotum.com/blog/2014/01/28/scanning-rock-paper-scissors/">here</a>.<br />
+As you can see each process is guided in a wizard-like procedure, wich has been chosen because it can break up the informations needed in multiple tabs, without flooding the screen with informations.</p>
+<p style="text-align: justify;">for example the scan quality (wich is determined by the camera resolution, numbero of points collected and postprocesses used) as well as the scanned area, can be selected with draggable controls.</p>
+<p style="text-align: justify;">A rubber duck is used to show the differences between the various settings.</p>
+<p style="text-align: justify;"><strong>Create / Print<br />
+</strong>The create menu is directly connected with the object manager (see below) to be able to print or mill directly from the available objects you saved.<br />
+You basically select the compatible files and click next.<br />
+Before printing you are prompted with some info (depending on the situation) and tips on how to better print or mill.<br />
+During the print process the user can override speed and temperature, while keeping an eye on the process.</p>
+<p style="text-align: justify;">Once the process is started some functions will be locked (for example you won&#8217;t be able to jog or make scans, but you&#8217;ll be able to browse the library.)<br />
+Thanks to this approach you may as well launch the print from your desktop PC and then log in the UI with a tablet and follow the print up close, like we did during the tests of the beta prototype. This is also true for remote access (connected to the UI over Internet).</p>
+<p style="text-align: justify;"><strong>Jog</strong><br />
+The jog feature is a must have in each and every CNC machine, to position the machine and do manual operations. The Jog in the FABtotum supports both additive and subtractive machining, allowing to switch from additive to subtractive (A/E). The Jog interface can be costumized easily.</p>
+<p style="text-align: justify;"><strong>Object Manager</strong> (aka Object library)<br />
+This is where things gets interesting.<br />
+You can &#8220;upload&#8221; from the client (your browser) or from a USB stick the supported files.<br />
+In the FAB UI one &#8220;object&#8221; is not &#8220;one object&#8221;. Let me explain:<br />
+You scan an object using the rotating laser scanner. you get a point cloud file. but the thing has holes because of the limits of that particular scanning method.<br />
+You go back and do another scan with, say, the Z-probe.<br />
+You now have 2 clouds. If the points are enought to reconstruct the object you can go ahead, otherwise you can reiterate this process.<br />
+Once you are done you&#8217;ll have, let&#8217;s say, 3 ASC cloud files.<br />
+From the Object manager you can join those parts and obtain the complete point cloud.<br />
+Once you have that you may download it from your browser, or try to reconstruct it onboard (experimental/WIP feature). either way you obtain an STL.<br />
+Now you have 1 cloud file and one STL.</p>
+<p style="text-align: justify;">You can slice it directly on the FABtotum (experimental/WIP feature)  and obtain a G-CODE.<br />
+Let&#8217;s suppose that your object is made of more parts, and some of them are not made with 3d printing, but with the built-in milling motor of the standard-issue hybrid head.<br />
+You can add another GCODE to the &#8220;object&#8221;.<br />
+Or you may add another STL to slice and obtain all the parts needed.<br />
+Or you might want to run the mesh recontruction on a good PC to increase the quality of the scanned data. Guess what? you still have the raw point cloud to download and process!<br />
+The result, as you can see, is that the user doesn&#8217;t need to mentally switch from additive to subtractive or &#8220;plan&#8221; too much, and will be prompted by the interface to perform manual operations before starting different procedures if needed.</p>
+<p style="text-align: justify;"><strong>Plugins</strong><br />
+Since the FABtotum can be used for many purposes other than the ones natively supported, one of the objectives of the development of this interface was to allow costumization where it made sense.<br />
+Plugins can be developed as an easy way to add functionalities to the interface and the device without introducing changes on the interface structure.<br />
+This way each plugin can be shared across all FABtotum users easily.<br />
+One plugin, for example, would allow STL or Gcode previews during the &#8220;create&#8221; process, something that required some external software.<br />
+We demoed this concept with the excellent Gcodeviewer by Joshua Parker.</p>
+<p style="text-align: justify;">We expect to see many great plugins from the community and we are planning to host those and allow direct download and installation directly from the interface (CMS-style).</p>
+<p style="text-align: justify;"><strong>Settings</strong><br />
+In the settings page you can decide how the the FABtotum and the interface behaves.<br />
+Some of the settings are about the the device, others are about the appeareance of the UI.<br />
+one example is chainging the skin/theme of the UI, the other is setting the lights inside the working volume, directly changing the RGB values.<br />
+In the settings we plan to add diagnostic tools (like a &#8220;self test&#8221;), or a cleaning wizard, a leveling wizard, or a spool change procedure, etc (not showed here).</p>
+<p style="text-align: justify;">We also have python running in the shadows, provinding that middle level of interaction between the UI and the Firmware (see development update 4 on IGG).<br />
+This is used for example, to give the user access to a python script running at boot, wich runs with root privileges and can be used for a lot of things. Really lots. of . things.</p>
+<p style="text-align: justify;"><strong>Updater<br />
+</strong>On the FABtotum UI you can always check the latest updates available from the FAbtotum server. The update process is guided and automated both for the UI and the Firmware itself.<br />
+Those updates (I won&#8217;t stop to underline this) are not mandatory, they are just suggested by the UI since we plan to improve the interface further and eventually fix whats breaks in the process.<br />
+The updater notifies the user in the top left corner (the blue zero means no update has been found due to lack of internet connectivity).</p>
+<p style="text-align: justify;"><strong>Open source development:</strong><br />
+Speaking of updates, the software sources will be online on GitHub under the Creative Commons Attribution-Noncommercial-Sharealike 3.0 Unported Licence, when ready. contributions will be integrated in the stable version and released for everyone.<br />
+Same goes for the firmware!</p>
+<p>The post <a rel="nofollow" href="https://www.fabtotum.com/fab-ui-the-fabtotum-user-interface/">FAB UI, the FABtotum user interface.</a> appeared first on <a rel="nofollow" href="https://www.fabtotum.com">FABtotum</a>.</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+Page Caching using disk: enhanced (Page is feed) 
+
+Served from: www.fabtotum.com @ 2018-08-13 13:39:42 by W3 Total Cache
+-->
