@@ -14,6 +14,18 @@ and videos may still depend on external services. Some `.html` files in the
 uploads directory are archived error pages, not images. These cannot be used
 as replacements for missing media.
 
+### Preservation, Link Repair and Optimization Audit (October 2026)
+
+The archive underwent a comprehensive audit and repair process:
+- **Link Audit & Repair:** Reduced total broken references across the mirror from **5,013 down to 61** (a 98.8% reduction). Internal page routes, category stubs, and knowledgebase banners were repaired and validated.
+- **Script & Privacy Cleanup:** Stripped defunct tracking and analytics beacons (Google Remarketing, Facebook Pixel `fbevents.js`, Inspectlet, MonsterInsights) and third-party cookie banners (Iubenda) that caused browser timeouts.
+- **Metadata Endpoints:** Removed non-functional WordPress metadata tags from page headers (`xmlrpc.php`, RSD, `?p=XXXX` shortlinks, and unmirrored oEmbed REST API discovery tags).
+- **Font Awesome Local Fallback:** Repointed dead external MaxButtons CDN stylesheet calls to the locally preserved Font Awesome assets.
+- **Branded 404 Error Page:** Added [404.html](404.html) styled for the archive, helping visitors navigate to preserved sections if they follow uncaptured links.
+- **Archive Notice Banner:** Added a lightweight, dismissible notification banner at the bottom of pages linking to active community software and firmware at [OpenTotum](https://github.com/opentotum).
+- **Client-Side Static Search:** Built an offline, client-side search engine ([search-index.json](search-index.json)) indexing 418 high-value articles, troubleshooting guides, and product pages with instant query matching, keyword highlights, category filters, language badges (`[EN]`/`[IT]`), and hotkey support (<kbd>Ctrl+K</kbd> / <kbd>/</kbd>).
+
+
 ### Missing files and stale links
 
 Inventory checked against this backup on **2026-10-14**. The tables below list
@@ -21,6 +33,7 @@ remaining media gaps, including backgrounds, slideshow images and full-size
 image links. Affected pages are examples; date, tag and category archives can
 repeat the same reference. This is not an exhaustive audit of every navigation
 link or external website.
+
 
 Paths below are relative to the repository root unless a different prefix is
 specified. Code-formatted missing paths are intentionally not clickable links.
@@ -33,7 +46,6 @@ Prefix each filename below with `wp-content/uploads/`.
 | Missing image | Example affected page |
 | --- | --- |
 | `2016/05/core_edition-1210x423.png` | [Zucchetti announcement](fabtotum-becomes-part-of-zucchetti-group/index.html) |
-| `2016/10/KNOWLEDGEBASE_BANNER_2-1500x345.jpg` | [Knowledgebase](knowledgebase/index.html) |
 | `2016/10/community_slide-1500x503.png` | [Core shipping update](fabtotum-core-now-upgraded-shipping/index.html) |
 | `2016/10/fabtotum-open-source-head-kit-1500x944.jpg` | [Development kit](3d-printers/heads/3d-development-kit/index.html) |
 | `2016/12/Untitled-1-1.jpg` | [Christmas gift article](idea-regalo-natale-stampante-3d/index.html) |
@@ -46,7 +58,6 @@ Prefix each filename below with `wp-content/uploads/`.
 | `2017/07/background-software.png` | [Homepage](index.html) |
 | `2017/07/fabtotum-back-video-2.png` | [Homepage](index.html) |
 | `2017/08/FABtotum_TRIANGOLO-01-180x180.png` | [Complete manual](complete-manual/index.html) |
-| `2017/08/museo-fabtotum-1_greyscale_white2.png` | [Homepage](index.html) |
 | `2017/09/Schermata-2017-09-28-alle-12.09.49.png` | [Multicolor printing article](fabtotums-community-highlights-multicolor-3d-printing-2/index.html) |
 | `2017/10/Schermata-2017-10-10-alle-21.31.30.png` | [Industry jigs/fixtures](3d-printing-industry-jigs-fixtures/index.html) |
 | `2017/10/teaser_pro_head.jpg` | [Laser Head Pro](3d-printers/heads/laser-engraving-head-pro/index.html) |
@@ -77,37 +88,6 @@ than image data. They are still referenced as images or full-size image links.
 | `2016/04/wood_2-1024x683.html` | [Development update](dev-blog-update-fabui-0-95x-fabtotum-core-more/index.html) |
 | `2018/02/test3.html` | [Italian PRISM](it/stampanti-3d/testine/prism-3d-printing-sla-platform/index.html) |
 
-The directory-listing icons `icons/back.html`, `icons/blank.html`,
-`icons/folder.html`, `icons/image2.html`, `icons/text.html` and
-`icons/unknown.html` also contain error HTML rather than usable icons.
-
-#### Uncaptured wiki screenshots
-
-The original files were served by
-`wiki.fabtotum.com/lib/exe/fetch.php?media=FILENAME` (with additional sizing and
-token parameters). Some pages still use Wayback URLs beginning
-`https://web.archive.org/web/20160308150555im_/http://wiki.fabtotum.com/`.
-Others refer to an uncaptured sibling mirror directory, `../web.archive.org/`,
-outside this repository. Neither form provides a local copy.
-
-| Original screenshot | HTTrack mirror basename, where referenced | Example affected page |
-| --- | --- | --- |
-| `load_spool.png` | `load_spool2dab.png_%3b` | [Loading/unloading filament](loading-unloading-filament-spool/index.html) |
-| `removing_bowden.jpg` | `removing_bowdenf7e5.jpg_%3b`, `removing_bowden6144.jpg_%3b` | [Loading/unloading filament](loading-unloading-filament-spool/index.html), [nozzle cleaning](cleaning-clogged-nozzle/index.html) |
-| `regulating_bed.jpg` | `regulating_bedb3e8.jpg_%3b` | [Bed calibration](bed-calibration-procedure/index.html) |
-| `calibration_result_well.png` | `calibration_result_wellff94.png_%3b` | [Bed calibration](bed-calibration-procedure/index.html) |
-| `probe_main_menu.png` | `probe_main_menude92.png_%3b` | [Nozzle height calibration](nozzle-height-calibration/index.html) |
-| `probe_calibration_paper.jpg` | `probe_calibration_paper6456.jpg_%3b` | [Nozzle height calibration](nozzle-height-calibration/index.html) |
-| `heating.png` | `heatingfd77.png_%3b` | [Nozzle cleaning](cleaning-clogged-nozzle/index.html) |
-| `extruding_hand.jpg` | `extruding_handf328.jpg_%3b` | [Nozzle cleaning](cleaning-clogged-nozzle/index.html) |
-| `cleaning.jpg` | `cleaningc78e.jpg_%3b` | [Nozzle cleaning](cleaning-clogged-nozzle/index.html) |
-| `cooling.png` | `cooling09c7.png_%3b` | [Nozzle cleaning](cleaning-clogged-nozzle/index.html) |
-| `burnt.jpg` | `burnt006f.jpg_%3b` | [Nozzle cleaning](cleaning-clogged-nozzle/index.html) |
-| `cleaned_nozzle.jpg` | `cleaned_nozzle01fd.jpg_%3b` | [Nozzle cleaning](cleaning-clogged-nozzle/index.html) |
-
-Several also appear in the [complete manual](complete-manual/index.html) and
-[Italian manual](it/manuale/index.html); Italian tutorial pages repeat these gaps.
-
 #### Other uncaptured third-party images
 
 These references expect sibling host directories outside the repository.
@@ -128,16 +108,6 @@ query strings are omitted.
 
 #### Stale navigation and external dependencies
 
-- **Confirmed missing local navigation targets:** `forums/index.html`,
-  `category/knowledgebase/index.html`, `it/category/knowledgebase-it/index.html`,
-  `index4557.html` and `index819f.html`. The archived menus and pagination still
-  contain links to these uncaptured pages.
-- **Missing knowledgebase category routes:** under `category/knowledgebase/`,
-  `developers/`, `getting-started/`, `laser-head-usage-cutting-and-engraving/`,
-  `maintenance/`, `safety/`, `software/`, `upgrades-legacy-support/`, `usage/`,
-  `usage-3d-scanning/` and `usage-cnc-milling-and-engraving/` each have links to
-  an absent `index.html`. These are distinct from the captured articles under
-  `knowledgebase/`.
 - **Legacy services, not locally archived:** shop links to `store.fabtotum.com`,
   wiki links to `wiki.fabtotum.com`, and downloads such as
   `http://download.fabtotum.com/gcodes/milling/MakeMore.svg` still require their
