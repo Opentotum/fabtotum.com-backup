@@ -1,0 +1,2349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" id="vbulletin_html">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<META NAME=”ROBOTS” CONTENT=”NOINDEX,FOLLOW”>
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="http://forum.fabtotum.cc" />
+<base href="http://forum.fabtotum.cc/" /><!--[if IE]></base><![endif]-->
+<meta name="generator" content="vBulletin 4.2.2" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+	<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="clientscript/yui/yuiloader-dom-event/yuiloader-dom-event.js?v=422"><\/script>');
+		document.write('<script type="text/javascript" src="clientscript/yui/connection/connection-min.js?v=422"><\/script>');
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="clientscript/yui/connection/connection-min.js?v=422"><\/script>');
+		}
+	}
+	var SESSIONURL = "s=4ac05f5719297efbcd825e5dbeceaf36&";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "images/misc";
+	var IMGDIR_BUTTON = "images/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "422";
+	var BBURL = "http://forum.fabtotum.cc";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "showthread.php?1305-igg-development-update-9-may-26th-2014";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "http://forum.fabtotum.cc/";
+// -->
+</script>
+<script type="text/javascript" src="http://forum.fabtotum.cc/clientscript/vbulletin-core.js?v=422"></script>
+
+
+
+
+
+	<link rel="stylesheet" type="text/css" href="css.php?styleid=6&amp;langid=1&amp;d=1440778314&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="css.php?styleid=6&amp;langid=1&amp;d=1440778314&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+
+
+	<meta name="keywords" content="update, hyperlink, missing, http://blog.fabtotum.com/wp-content/uploads/2014/05/2012-08-08-10.12.53-624x468.jpg, censored, figure, editor, sadly, early, alpha, prototype, development, suggest, speel/grammar, check, wikimedia, platform" />
+	<meta name="description" content="DEV. UPDATE#9 
+Dear backers, 
+Today we'll have a look at the production  and supply chain status, but first let us proudly unveil the FABtotum Hybrid head. 
+ 
+ 
+https://images.indiegogo.com/file_attachments/614229/files/20140530083406-head_render2.png?1401464046 
+ 
+FABtotum Hybrid head V 1.0 
+The Hybrid head is one of the last finalized parts of the Personal fabricator, 
+We  improved many specs of this part,starting from the onboard milling  motor wich is now a 200W brushless beast, with" />
+
+	<title> IGG Development update #9 May 26th 2014</title>
+	<link rel="canonical" href="showthread.php?1305-IGG-Development-update-9-May-26th-2014&s=4ac05f5719297efbcd825e5dbeceaf36" />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="css.php?styleid=6&amp;langid=1&amp;d=1440778314&amp;td=ltr&amp;sheet=toolsmenu.css,postlist.css,showthread.css,postbit.css,options.css,attachment.css,poll.css,lightbox.css" />
+	
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="css.php?styleid=6&amp;langid=1&amp;d=1440778314&amp;td=ltr&amp;sheet=toolsmenu-ie.css,postlist-ie.css,showthread-ie.css,postbit-ie.css,poll-ie.css" /><![endif]-->
+<link rel="stylesheet" type="text/css" href="css.php?styleid=6&amp;langid=1&amp;d=1440778314&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+
+<body>
+
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<div id="header" class="floatcontainer doc_header">
+	<div><a name="top" href="forum.php?s=4ac05f5719297efbcd825e5dbeceaf36" class="logo-image"><img src="images/misc/logo.png" alt="Forums - Powered by vBulletin" /></a></div>
+	<div id="toplinks" class="toplinks">
+		
+			<ul class="nouser">
+			
+				<li><a href="register.php?s=4ac05f5719297efbcd825e5dbeceaf36" rel="nofollow">Register</a></li>
+			
+				<li><a rel="help" href="faq.php?s=4ac05f5719297efbcd825e5dbeceaf36">Help</a></li>
+				<li>
+			<script type="text/javascript" src="clientscript/vbulletin_md5.js?v=422"></script>
+			<form id="navbar_loginform" action="login.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset id="logindetails" class="logindetails">
+					<div>
+						<div>
+					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" />
+					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" />
+					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Password" style="display:none;" />
+					<input type="submit" class="loginbutton" tabindex="104" value="Log in" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+						</div>
+					</div>
+				</fieldset>
+				<div id="remember" class="remember">
+					<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" /> Remember Me?</label>
+				</div>
+
+				<input type="hidden" name="s" value="4ac05f5719297efbcd825e5dbeceaf36" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="login" />
+				<input type="hidden" name="vb_login_md5password" />
+				<input type="hidden" name="vb_login_md5password_utf" />
+			</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'User Name')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#000000';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='User Name';
+					textbox.style.color='#777777';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+				</li>
+				
+			</ul>
+		
+	</div>
+	<div class="ad_global_header">
+		
+		
+	</div>
+	<hr />
+</div>
+<div id="navbar" class="navbar">
+	<ul id="navtabs" class="navtabs floatcontainer">
+		
+		
+	
+		<li class="selected" id="vbtab_forum">
+			<a class="navtab" href="forum.php?s=4ac05f5719297efbcd825e5dbeceaf36">Forum</a>
+		</li>
+		
+		
+			<ul class="floatcontainer">
+				
+					
+						
+							<li id="vbflink_newposts"><a href="search.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=getnew&amp;contenttype=vBForum_Post">New Posts</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_faq"><a href="faq.php?s=4ac05f5719297efbcd825e5dbeceaf36">FAQ</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_calendar"><a href="calendar.php?s=4ac05f5719297efbcd825e5dbeceaf36">Calendar</a></li>
+						
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_community">
+							<a href="javascript://" class="popupctrl">Community</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbclink_members"><a href="memberlist.php?s=4ac05f5719297efbcd825e5dbeceaf36">Member List</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_actions">
+							<a href="javascript://" class="popupctrl">Forum Actions</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbalink_mfr"><a href="forumdisplay.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=markread&amp;markreadhash=guest">Mark Forums Read</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_qlinks">
+							<a href="javascript://" class="popupctrl">Quick Links</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbqlink_posts"><a href="search.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=getdaily&amp;contenttype=vBForum_Post">Today's Posts</a></li>
+								
+									<li id="vbqlink_leaders"><a href="showgroups.php?s=4ac05f5719297efbcd825e5dbeceaf36">View Site Leaders</a></li>
+								
+							</ul>
+						</li>
+					
+				
+			</ul>
+		
+
+	
+		<li  id="tab_mje3_796">
+			<a class="navtab" href="http://fabtotum.cc">FABtotum Blog</a>
+		</li>
+		
+		
+
+	
+		<li  id="vbtab_whatsnew">
+			<a class="navtab" href="http://forum.fabtotum.cc/search.php?searchid=7850">What's New?</a>
+		</li>
+		
+		
+
+		
+	</ul>
+	
+		<div id="globalsearch" class="globalsearch">
+			<form action="search.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=process" method="post" id="navbar_search" class="navbar_search">
+				
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="process" />
+				<span class="textboxcontainer"><span><input type="text" value="" name="query" class="textbox" tabindex="99"/></span></span>
+				<span class="buttoncontainer"><span><input type="image" class="searchbutton" src="images/buttons/search.png" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"/></span></span>
+			</form>
+			<ul class="navbar_advanced_search">
+				<li><a href="search.php?s=4ac05f5719297efbcd825e5dbeceaf36" accesskey="4">Advanced Search</a></li>
+				
+			</ul>
+		</div>
+	
+</div>
+</div><!-- closing div for above_body -->
+
+<div class="body_wrapper">
+<div id="breadcrumb" class="breadcrumb">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="index.php?s=4ac05f5719297efbcd825e5dbeceaf36" accesskey="1"><img src="images/misc/navbit-home.png" alt="Home" /></a></li>
+		
+	<li class="navbit"><a href="forum.php?s=4ac05f5719297efbcd825e5dbeceaf36">Forum</a></li>
+
+	<li class="navbit"><a href="forumdisplay.php?1-FABtotum-Personal-Fabricator&amp;s=4ac05f5719297efbcd825e5dbeceaf36">FABtotum Personal Fabricator</a></li>
+
+	<li class="navbit"><a href="forumdisplay.php?9-Development-Logs&amp;s=4ac05f5719297efbcd825e5dbeceaf36">Development Logs</a></li>
+
+		
+	<li class="navbit lastnavbit"><span> IGG Development update #9 May 26th 2014</span></li>
+
+	</ul>
+	<hr />
+</div>
+
+
+
+
+
+	<form action="profile.php?do=dismissnotice" method="post" id="notices" class="notices">
+		<input type="hidden" name="do" value="dismissnotice" />
+		<input type="hidden" name="s" value="s=4ac05f5719297efbcd825e5dbeceaf36&amp;" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" id="dismiss_notice_hidden" name="dismiss_noticeid" value="" />
+		<input type="hidden" name="url" value="" />
+		<ol>
+			<li class="restore" id="navbar_notice_1">
+	
+	If this is your first visit, be sure to
+		check out the <a href="faq.php?s=4ac05f5719297efbcd825e5dbeceaf36" target="_blank"><b>FAQ</b></a> by clicking the
+		link above. You may have to <a href="register.php?s=4ac05f5719297efbcd825e5dbeceaf36" target="_blank"><b>register</b></a>
+		before you can post: click the register link above to proceed. To start viewing messages,
+		select the forum that you want to visit from the selection below.
+</li>
+		</ol>
+	</form>
+
+
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+		<div id="pagination_top" class="pagination_top">
+		
+			<form action="showthread.php?1305-IGG-Development-update-9-May-26th-2014/page3&amp;s=4ac05f5719297efbcd825e5dbeceaf36" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="1305" /><input type="hidden" name="s" value="4ac05f5719297efbcd825e5dbeceaf36" />
+	
+		<span><a href="javascript://" class="popupctrl">Page 1 of 3</a></span>
+		
+		
+		
+		<span class="selected"><a href="javascript://" title="Results 1 to 10 of 28">1</a></span><span><a href="showthread.php?1305-IGG-Development-update-9-May-26th-2014/page2&amp;s=4ac05f5719297efbcd825e5dbeceaf36" title="Show results 11 to 20 of 28">2</a></span><span><a href="showthread.php?1305-IGG-Development-update-9-May-26th-2014/page3&amp;s=4ac05f5719297efbcd825e5dbeceaf36" title="Show results 21 to 28 of 28">3</a></span>
+		
+		
+		<span class="prev_next"><a rel="next" href="showthread.php?1305-IGG-Development-update-9-May-26th-2014/page2&amp;s=4ac05f5719297efbcd825e5dbeceaf36" title="Next Page - Results 11 to 20 of 28"><img src="images/pagination/next-right.png" alt="Next" /></a></span>
+		
+		
+		<span class="first_last"><a href="showthread.php?1305-IGG-Development-update-9-May-26th-2014/page3&amp;s=4ac05f5719297efbcd825e5dbeceaf36" title="Last Page - Results 21 to 28 of 28">Last<img src="images/pagination/last-right.png" alt="Last" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Jump to page: <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Go" /></li>
+	</ul>
+</form>
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Results 1 to 10 of 28
+			</div>
+		</div>
+	</div>
+	<div id="pagetitle" class="pagetitle">
+		<h1>
+			Thread: <span class="threadtitle"><a href="showthread.php?1305-IGG-Development-update-9-May-26th-2014&s=4ac05f5719297efbcd825e5dbeceaf36" title="Reload this Page">IGG Development update #9 May 26th 2014</a></span>
+		</h1>
+		
+	</div>
+	<div id="thread_controls" class="thread_controls toolsmenu">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Thread Tools</a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthread.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;t=1305&amp;pp=10&amp;page=1" accesskey="3" rel="nofollow">Show Printable Version</a></li>
+					
+						<li><a href="sendmessage.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=sendtofriend&amp;t=1305" rel="nofollow">Email this Page&hellip;</a></li>
+					
+					<li>
+						
+							<a href="subscription.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=addsubscription&amp;t=1305" rel="nofollow">Subscribe to this Thread&hellip;</a>
+						
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Display</a></h6>
+					<ul class="popupbody popuphover">
+						<li><label>Linear Mode</label></li>
+						<li><a href="showthread.php?1305-IGG-Development-update-9-May-26th-2014&amp;s=4ac05f5719297efbcd825e5dbeceaf36&amp;mode=hybrid"> Switch to Hybrid Mode</a></li>
+						<li><a href="showthread.php?1305-IGG-Development-update-9-May-26th-2014&amp;s=4ac05f5719297efbcd825e5dbeceaf36&amp;p=2254&amp;mode=threaded#post2254"> Switch to Threaded Mode</a></li>
+					</ul>
+				</li>
+			
+
+			
+			</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			
+<li class="postbitlegacy postbitim postcontainer old" id="post_2254">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">05-26-2014,&nbsp;<span class="time">08:16 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post2254" href="showthread.php?1305-IGG-Development-update-9-May-26th-2014&amp;s=4ac05f5719297efbcd825e5dbeceaf36&amp;p=2254&amp;viewfull=1#post2254" class="postcounter">#1</a><a id="postcount2254" name="1"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?1-Marco&amp;s=4ac05f5719297efbcd825e5dbeceaf36" title="Marco is offline"><strong>Marco</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?1-Marco&amp;s=4ac05f5719297efbcd825e5dbeceaf36" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=finduser&amp;userid=1&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=newpm&amp;u=1" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="Marco is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				<font color=#5FA2F5>FABteam</font>
+			</span>
+			
+			
+			
+			
+			<a class="postuseravatar" href="member.php?1-Marco&amp;s=4ac05f5719297efbcd825e5dbeceaf36" title="Marco is offline">
+				<img src="image.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;u=1&amp;dateline=1398530593" alt="Marco's Avatar" title="Marco's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Oct 2013</dd>
+					
+					
+					<dt>Posts</dt> <dd>1,289</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+				<h2 class="title icon">
+					<img src="images/icons/icon1.png" alt="Post" /> IGG Development update #9 May 26th 2014
+				</h2>
+				
+
+
+						
+							
+							
+						
+						
+				<div class="content">
+					<div id="post_message_2254">
+						<blockquote class="postcontent restore ">
+							<b>DEV. UPDATE#9<br />
+</b>Dear backers,<br />
+Today we'll have a look at the production  and supply chain status, but first let us proudly unveil the FABtotum Hybrid head.<br />
+<br />
+<br />
+<img src="https://images.indiegogo.com/file_attachments/614229/files/20140530083406-head_render2.png?1401464046" border="0" alt="" /><b><br />
+<br />
+FABtotum <b>Hybrid</b> head V 1.0</b><br />
+The Hybrid head is one of the last finalized parts of the Personal fabricator,<br />
+We  improved many specs of this part,starting from the onboard milling  motor wich is now a 200W brushless beast, with custom-made  high-precision ER-8 collet for improved quality.<br />
+We started from something like this and we ended with this:<br />
+<br />
+<img src="https://images.indiegogo.com/file_attachments/614237/files/20140530084101-fab_head_explosion2.png?1401464461" border="0" alt="" /><br />
+<br />
+Switching from  subtractive to additive mode requires a fixed offset instead of manual  adjustments. As you may also notice, enstops, lasers, lights and  probe are fixed on the carriage so that any optional head can be cheaper and made with the FABtotum itself.<br />
+<br />
+<br />
+<img src="https://images.indiegogo.com/file_attachments/614247/files/20140530085102-IMG_2565.JPG?1401465062" border="0" alt="" /><br />
+<br />
+<br />
+<b>Supply Chain Delays  </b><i>[Important!]</i><br />
+As you know, one month  ago we announced a delay of the production.<br />
+We recevied a  great support and understanding from you guys, and for that we are  grateful. Leaving our backers with incomplete details  could however generate more confusion than any honest &quot;we're doing our best&quot; statement.<br />
+For this reason we are sharing with you most of our sensible internal plans.<br />
+We hope, doing this, to shed some light on this complex process. <br />
+<br />
+<br />
+<img src="https://images.indiegogo.com/file_attachments/614262/files/20140530090209-supply.png?1401465729" border="0" alt="" /><br />
+<br />
+<br />
+Here you can see the current status of our suppliers: <a href="http://blog.fabtotum.com/wp-content/uploads/2014/05/2_timeline.jpg" target="_blank">[1]</a> <a href="http://blog.fabtotum.com/wp-content/uploads/2014/05/1_timeline.jpg" target="_blank">[2]</a>. We aren't terribly off or &quot;tardi&quot;, considering the original shipping date was late May 2014. but it's a delay nonetheless.<br />
+As you can see this is caused by all custom-made parts that require our contractors to machine parts for us, out of our control.<br />
+<br />
+<img src="https://images.indiegogo.com/file_attachments/614339/files/20140530093313-IMG_2575.JPG?1401467593" border="0" alt="" /><br />
+<i>A reasonable measurement for the first deliveries is perhaps 2 months from now,if everything goes right.</i><br />
+Things are always moving fast: have a look at one of the most complex components being finished as we write: injection molds.<br />
+<br />
+<img src="https://images.indiegogo.com/file_attachments/614316/files/20140530092034-Cattura2.JPG?1401466834" border="0" alt="" /><br />
+<br />
+<b>Packaging &amp; Welcome kit.<br />
+</b>We  might be late but packaging and part of the welcome kit were ready for  the release. the box is pretty sturdy and the welcome kit has been  designed to get people into personal fabrication quickly.<b><img src="https://images.indiegogo.com/file_attachments/614327/files/20140530092736-getready.jpg?1401467256" border="0" alt="" /></b><img src="https://images.indiegogo.com/file_attachments/614329/files/20140530092810-box.JPG?1401467290" border="0" alt="" /><br />
+<img src="https://images.indiegogo.com/file_attachments/614331/files/20140530092836-box2.JPG?1401467316" border="0" alt="" /><br />
+<br />
+<br />
+<b>In other news</b><br />
+We are preparing more documentation,<i> images and videos </i>to share with you.<br />
+In the last Blog update we focused on the <a href="http://blog.fabtotum.com/blog/2014/05/12/fab-ui-the-fabtotum-user-interface/" target="_blank">FABUI</a>,expect more in the future.<br />
+FABtotum also won the special jury prize at the <a href="https://www.facebook.com/3DFABtotum/photos/a.559936420729250.1073741830.542154152507477/704453222944235/?type=1&amp;relevant_count=1" target="_blank">FOCUS Innovation award</a> this month. Thanks for voting!<br />
+<br />
+<img src="https://images.indiegogo.com/file_attachments/614439/files/20140530102950-topdown.jpg?1401470990" border="0" alt="" /><br />
+<br />
+As always: your feedback is important: hit the comment section here or on <a href="http://forum.fabtotum.cc/showthread.php?1305" target="_blank">our forums</a> and speak your mind!<br />
+<br />
+See you next update and on the Blog!<i><br />
+FABteam</i>
+						</blockquote>
+					</div>
+
+					
+						<div class="attachments">
+
+						
+							<fieldset class="postcontent">
+								<legend><img src="images/misc/paperclip.png" class="inlineimg" alt="Attached Thumbnails" /> Attached Thumbnails</legend>
+								
+<a href="attachment.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;attachmentid=30&amp;d=1401129541" 
+rel="Lightbox_2254" id="attachment30"
+><img class="thumbnail" src="attachment.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;attachmentid=30&amp;stc=1&amp;thumb=1&amp;d=1401129541" 
+alt="Click image for larger version.&nbsp;
+
+Name:	IMG_20140507_102325.jpg&nbsp;
+Views:	332&nbsp;
+Size:	80.0 KB&nbsp;
+ID:	30"/></a>
+&nbsp;
+
+							</fieldset>
+						
+
+						
+
+						
+
+						
+
+						
+
+						</div>
+					<!-- / attachments -->
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				<!-- edit note -->
+				<blockquote class="postcontent lastedited">
+					
+						Last edited by Marco; 05-30-2014 at <span class="time">06:51 PM</span>.
+					
+					
+						<span class="reason">Reason:</span> update out!
+					
+				</blockquote>
+				<!-- / edit note -->
+				
+				
+				
+					
+				
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_2254" src="images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_2254" class="newreply" href="newreply.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=newreply&amp;p=2254" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2254" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_2259">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">05-26-2014,&nbsp;<span class="time">10:08 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post2259" href="showthread.php?1305-IGG-Development-update-9-May-26th-2014&amp;s=4ac05f5719297efbcd825e5dbeceaf36&amp;p=2259&amp;viewfull=1#post2259" class="postcounter">#2</a><a id="postcount2259" name="2"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?15-imarin&amp;s=4ac05f5719297efbcd825e5dbeceaf36" title="imarin is offline"><strong>imarin</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?15-imarin&amp;s=4ac05f5719297efbcd825e5dbeceaf36" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=finduser&amp;userid=15&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=newpm&amp;u=15" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="imarin is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Senior Member
+			</span>
+			
+			
+			
+			
+			<a class="postuseravatar" href="member.php?15-imarin&amp;s=4ac05f5719297efbcd825e5dbeceaf36" title="imarin is offline">
+				<img src="image.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;u=15&amp;dateline=1391437838" alt="imarin's Avatar" title="imarin's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Oct 2013</dd>
+					
+					
+					<dt>Posts</dt> <dd>2,118</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_2259">
+						<blockquote class="postcontent restore ">
+							Surprise topic! Surprise topic! Surprise topic!<img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /><br />
+<br />
+Health always comes first. You can delay mine an extra month, but remain healthy all of you!!
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_2259" src="images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_2259" class="newreply" href="newreply.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=newreply&amp;p=2259" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2259" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_2269">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">05-27-2014,&nbsp;<span class="time">04:25 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post2269" href="showthread.php?1305-IGG-Development-update-9-May-26th-2014&amp;s=4ac05f5719297efbcd825e5dbeceaf36&amp;p=2269&amp;viewfull=1#post2269" class="postcounter">#3</a><a id="postcount2269" name="3"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?1168-joep-swagemakers-gmail-co&amp;s=4ac05f5719297efbcd825e5dbeceaf36" title="joep.swagemakers@gmail.co is offline"><strong>joep.swagemakers@gmail.co</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?1168-joep-swagemakers-gmail-co&amp;s=4ac05f5719297efbcd825e5dbeceaf36" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=finduser&amp;userid=1168&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=newpm&amp;u=1168" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="joep.swagemakers@gmail.co is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Member
+			</span>
+			
+			
+			
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Mar 2014</dd>
+					
+					
+					<dt>Posts</dt> <dd>35</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_2269">
+						<blockquote class="postcontent restore ">
+							I would really like to see some detail and closeup photo's of the machine! <img src="images/smilies/biggrin.png" border="0" alt="" title="Big Grin" class="inlineimg" /> Also some video's of the different functions (printing, milling(different materials)) would be a super nice teaser!
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_2269" src="images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_2269" class="newreply" href="newreply.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=newreply&amp;p=2269" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2269" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_2271">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">05-27-2014,&nbsp;<span class="time">06:19 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post2271" href="showthread.php?1305-IGG-Development-update-9-May-26th-2014&amp;s=4ac05f5719297efbcd825e5dbeceaf36&amp;p=2271&amp;viewfull=1#post2271" class="postcounter">#4</a><a id="postcount2271" name="4"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?1098-TheCamel&amp;s=4ac05f5719297efbcd825e5dbeceaf36" title="TheCamel is offline"><strong>TheCamel</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?1098-TheCamel&amp;s=4ac05f5719297efbcd825e5dbeceaf36" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=finduser&amp;userid=1098&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=newpm&amp;u=1098" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="TheCamel is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Junior Member
+			</span>
+			
+			
+			
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jan 2014</dd>
+					
+					
+					<dt>Posts</dt> <dd>16</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_2271">
+						<blockquote class="postcontent restore ">
+							Videos would definitely be super cool!<br />
+<br />
+PS: Is it a low-cost reflow oven that we can see on the shelf? <img src="images/smilies/tongue.png" border="0" alt="" title="Stick Out Tongue" class="inlineimg" />
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_2271" src="images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_2271" class="newreply" href="newreply.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=newreply&amp;p=2271" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2271" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_2273">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">05-27-2014,&nbsp;<span class="time">09:21 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post2273" href="showthread.php?1305-IGG-Development-update-9-May-26th-2014&amp;s=4ac05f5719297efbcd825e5dbeceaf36&amp;p=2273&amp;viewfull=1#post2273" class="postcounter">#5</a><a id="postcount2273" name="5"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?1-Marco&amp;s=4ac05f5719297efbcd825e5dbeceaf36" title="Marco is offline"><strong>Marco</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?1-Marco&amp;s=4ac05f5719297efbcd825e5dbeceaf36" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=finduser&amp;userid=1&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=newpm&amp;u=1" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="Marco is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				<font color=#5FA2F5>FABteam</font>
+			</span>
+			
+			
+			
+			
+			<a class="postuseravatar" href="member.php?1-Marco&amp;s=4ac05f5719297efbcd825e5dbeceaf36" title="Marco is offline">
+				<img src="image.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;u=1&amp;dateline=1398530593" alt="Marco's Avatar" title="Marco's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Oct 2013</dd>
+					
+					
+					<dt>Posts</dt> <dd>1,289</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_2273">
+						<blockquote class="postcontent restore ">
+							Videos are coming!<br />
+Good eye. Yes it's a reflow oven we don't use anymore so it's left there between boxes.
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_2273" src="images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_2273" class="newreply" href="newreply.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=newreply&amp;p=2273" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2273" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_2283">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">05-29-2014,&nbsp;<span class="time">08:52 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post2283" href="showthread.php?1305-IGG-Development-update-9-May-26th-2014&amp;s=4ac05f5719297efbcd825e5dbeceaf36&amp;p=2283&amp;viewfull=1#post2283" class="postcounter">#6</a><a id="postcount2283" name="6"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?12-Sinistros&amp;s=4ac05f5719297efbcd825e5dbeceaf36" title="Sinistros is offline"><strong>Sinistros</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?12-Sinistros&amp;s=4ac05f5719297efbcd825e5dbeceaf36" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=finduser&amp;userid=12&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=newpm&amp;u=12" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="Sinistros is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Senior Member
+			</span>
+			
+			
+			
+			
+			<a class="postuseravatar" href="member.php?12-Sinistros&amp;s=4ac05f5719297efbcd825e5dbeceaf36" title="Sinistros is offline">
+				<img src="image.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;u=12&amp;dateline=1397464619" alt="Sinistros's Avatar" title="Sinistros's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Oct 2013</dd>
+					<dt>Location</dt> <dd>Germany</dd>
+					
+					<dt>Posts</dt> <dd>139</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_2283">
+						<blockquote class="postcontent restore ">
+							Yeah, - Surprise topic [?] <br />
+<br />
+I know you guys on R&amp;D for the shark with the head mounted laserbeam <img src="images/smilies/wink.png" border="0" alt="" title="Wink" class="inlineimg" /><br />
+<br />
+btw the health has priority over compliance with the delivery date!!! <br />
+Please all stay healthy <img src="images/smilies/biggrin.png" border="0" alt="" title="Big Grin" class="inlineimg" />
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_2283" src="images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_2283" class="newreply" href="newreply.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=newreply&amp;p=2283" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2283" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_2285">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">05-30-2014,&nbsp;<span class="time">06:54 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post2285" href="showthread.php?1305-IGG-Development-update-9-May-26th-2014&amp;s=4ac05f5719297efbcd825e5dbeceaf36&amp;p=2285&amp;viewfull=1#post2285" class="postcounter">#7</a><a id="postcount2285" name="7"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?1-Marco&amp;s=4ac05f5719297efbcd825e5dbeceaf36" title="Marco is offline"><strong>Marco</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?1-Marco&amp;s=4ac05f5719297efbcd825e5dbeceaf36" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=finduser&amp;userid=1&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=newpm&amp;u=1" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="Marco is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				<font color=#5FA2F5>FABteam</font>
+			</span>
+			
+			
+			
+			
+			<a class="postuseravatar" href="member.php?1-Marco&amp;s=4ac05f5719297efbcd825e5dbeceaf36" title="Marco is offline">
+				<img src="image.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;u=1&amp;dateline=1398530593" alt="Marco's Avatar" title="Marco's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Oct 2013</dd>
+					
+					
+					<dt>Posts</dt> <dd>1,289</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_2285">
+						<blockquote class="postcontent restore ">
+							Update #9 is out. <br />
+My personal apology for the delay in redacting the update!<br />
+Thanks for understanding. some of us started getting sick due to insane shifts, plus we had mandatory safety classes for fire prevention and health risks in the office, so the delay got pushed back more than usual.<br />
+Hopefully you guys will appreciate the amount of info, despite the damned IGG character limit!
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				<!-- edit note -->
+				<blockquote class="postcontent lastedited">
+					
+						Last edited by Marco; 05-30-2014 at <span class="time">06:57 PM</span>.
+					
+					
+				</blockquote>
+				<!-- / edit note -->
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_2285" src="images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_2285" class="newreply" href="newreply.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=newreply&amp;p=2285" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2285" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_2286">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">05-30-2014,&nbsp;<span class="time">07:14 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post2286" href="showthread.php?1305-IGG-Development-update-9-May-26th-2014&amp;s=4ac05f5719297efbcd825e5dbeceaf36&amp;p=2286&amp;viewfull=1#post2286" class="postcounter">#8</a><a id="postcount2286" name="8"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?36-Snowman&amp;s=4ac05f5719297efbcd825e5dbeceaf36" title="Snowman is offline"><strong>Snowman</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?36-Snowman&amp;s=4ac05f5719297efbcd825e5dbeceaf36" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=finduser&amp;userid=36&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=newpm&amp;u=36" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="Snowman is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Member
+			</span>
+			
+			
+			
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Oct 2013</dd>
+					
+					
+					<dt>Posts</dt> <dd>53</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_2286">
+						<blockquote class="postcontent restore ">
+							Well, 2 more months <i>is</i> a bit disappointing but the fact that I'll be receiving a product that's exponentially better than what I paid for (stretch goal #2 Fabtotum seems almost primitive in comparison) more than makes up for it. Big thumbs up on the transparency with the delays. <br />
+<br />
+I'm guessing you'll be working on the UI, online guides/specs, additional heads, etc. and maybe a bit of pre-assembly in the mean time?<br />
+<br />
+Really looking forward to the upcoming videos and pictures you've mentioned. Thanks for the update.
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_2286" src="images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_2286" class="newreply" href="newreply.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=newreply&amp;p=2286" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2286" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_2287">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">05-30-2014,&nbsp;<span class="time">07:17 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post2287" href="showthread.php?1305-IGG-Development-update-9-May-26th-2014&amp;s=4ac05f5719297efbcd825e5dbeceaf36&amp;p=2287&amp;viewfull=1#post2287" class="postcounter">#9</a><a id="postcount2287" name="9"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?15-imarin&amp;s=4ac05f5719297efbcd825e5dbeceaf36" title="imarin is offline"><strong>imarin</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?15-imarin&amp;s=4ac05f5719297efbcd825e5dbeceaf36" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=finduser&amp;userid=15&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=newpm&amp;u=15" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="imarin is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Senior Member
+			</span>
+			
+			
+			
+			
+			<a class="postuseravatar" href="member.php?15-imarin&amp;s=4ac05f5719297efbcd825e5dbeceaf36" title="imarin is offline">
+				<img src="image.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;u=15&amp;dateline=1391437838" alt="imarin's Avatar" title="imarin's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Oct 2013</dd>
+					
+					
+					<dt>Posts</dt> <dd>2,118</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_2287">
+						<blockquote class="postcontent restore ">
+							You can not be clearer!<br />
+<br />
+It looks really goooood!! 2 months is nothing. Keep healthy, book some holidays....<br />
+<br />
+BTW, put a good security system, because everybody knows exactly what you have in stock!!
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_2287" src="images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_2287" class="newreply" href="newreply.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=newreply&amp;p=2287" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2287" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_2288">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">05-30-2014,&nbsp;<span class="time">07:30 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post2288" href="showthread.php?1305-IGG-Development-update-9-May-26th-2014&amp;s=4ac05f5719297efbcd825e5dbeceaf36&amp;p=2288&amp;viewfull=1#post2288" class="postcounter">#10</a><a id="postcount2288" name="10"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?42-caliber&amp;s=4ac05f5719297efbcd825e5dbeceaf36" title="caliber is offline"><strong>caliber</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?42-caliber&amp;s=4ac05f5719297efbcd825e5dbeceaf36" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=finduser&amp;userid=42&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=newpm&amp;u=42" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="caliber is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Member
+			</span>
+			
+			
+			
+			
+			<a class="postuseravatar" href="member.php?42-caliber&amp;s=4ac05f5719297efbcd825e5dbeceaf36" title="caliber is offline">
+				<img src="image.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;u=42&amp;dateline=1422541080" alt="caliber's Avatar" title="caliber's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Oct 2013</dd>
+					<dt>Location</dt> <dd>South Africa</dd>
+					
+					<dt>Posts</dt> <dd>87</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+
+
+						
+						
+							
+						
+				<div class="content">
+					<div id="post_message_2288">
+						<blockquote class="postcontent restore ">
+							<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				<div class="bbcode_postedby">
+					<img src="images/misc/quote_icon.png" alt="Quote" /> Originally Posted by <strong>Snowman</strong>
+					<a href="showthread.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;p=2286#post2286" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost-right.png" alt="View Post" /></a>
+				</div>
+				<div class="message">Well, 2 more months <i>is</i> a bit disappointing but the fact that I'll be receiving a product that's exponentially better than what I paid for (stretch goal #2 Fabtotum seems almost primitive in comparison) more than makes up for it. Big thumbs up on the transparency with the delays.</div>
+			
+		</div>
+	</div>
+</div>Agreed, the Fabtotum I'll be getting is vastly superior to the one I was expecting to get when I contributed (a bit before the 135k goal was reached)..<br />
+Having already waited 9 months, 2 more certainly won't hurt (except that I'll be 30 by then <img src="images/smilies/eek.png" border="0" alt="" title="EEK!" class="inlineimg" /> ).<br />
+<br />
+The new head looks really good btw.
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_2288" src="images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_2288" class="newreply" href="newreply.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=newreply&amp;p=2288" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2288" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+		</ol>
+		<div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		<form action="showthread.php?1305-IGG-Development-update-9-May-26th-2014/page3&amp;s=4ac05f5719297efbcd825e5dbeceaf36" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="1305" /><input type="hidden" name="s" value="4ac05f5719297efbcd825e5dbeceaf36" />
+	
+		<span><a href="javascript://" class="popupctrl">Page 1 of 3</a></span>
+		
+		
+		
+		<span class="selected"><a href="javascript://" title="Results 1 to 10 of 28">1</a></span><span><a href="showthread.php?1305-IGG-Development-update-9-May-26th-2014/page2&amp;s=4ac05f5719297efbcd825e5dbeceaf36" title="Show results 11 to 20 of 28">2</a></span><span><a href="showthread.php?1305-IGG-Development-update-9-May-26th-2014/page3&amp;s=4ac05f5719297efbcd825e5dbeceaf36" title="Show results 21 to 28 of 28">3</a></span>
+		
+		
+		<span class="prev_next"><a rel="next" href="showthread.php?1305-IGG-Development-update-9-May-26th-2014/page2&amp;s=4ac05f5719297efbcd825e5dbeceaf36" title="Next Page - Results 11 to 20 of 28"><img src="images/pagination/next-right.png" alt="Next" /></a></span>
+		
+		
+		<span class="first_last"><a href="showthread.php?1305-IGG-Development-update-9-May-26th-2014/page3&amp;s=4ac05f5719297efbcd825e5dbeceaf36" title="Last Page - Results 21 to 28 of 28">Last<img src="images/pagination/last-right.png" alt="Last" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Jump to page: <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Go" /></li>
+	</ul>
+</form>
+	
+		<div class="clear"></div>
+<div class="navpopupmenu popupmenu nohovermenu" id="showthread_navpopup">
+	
+		<span class="shade">Quick Navigation</span>
+		<a href="showthread.php?1305-IGG-Development-update-9-May-26th-2014&amp;s=4ac05f5719297efbcd825e5dbeceaf36" class="popupctrl"><span class="ctrlcontainer">Development Logs</span></a>
+		<a href="showthread.php?1305-igg-development-update-9-may-26th-2014#top" class="textcontrol" onclick="document.location.hash='top';return false;">Top</a>
+	
+	<ul class="navpopupbody popupbody popuphover">
+		
+		<li class="optionlabel">Site Areas</li>
+		<li><a href="usercp.php?s=4ac05f5719297efbcd825e5dbeceaf36">Settings</a></li>
+		<li><a href="private.php?s=4ac05f5719297efbcd825e5dbeceaf36">Private Messages</a></li>
+		<li><a href="subscription.php?s=4ac05f5719297efbcd825e5dbeceaf36">Subscriptions</a></li>
+		<li><a href="online.php?s=4ac05f5719297efbcd825e5dbeceaf36">Who's Online</a></li>
+		<li><a href="search.php?s=4ac05f5719297efbcd825e5dbeceaf36">Search Forums</a></li>
+		<li><a href="forum.php?s=4ac05f5719297efbcd825e5dbeceaf36">Forums Home</a></li>
+		
+			<li class="optionlabel">Forums</li>
+			
+		
+			
+				<li><a href="forumdisplay.php?1-FABtotum-Personal-Fabricator&amp;s=4ac05f5719297efbcd825e5dbeceaf36">FABtotum Personal Fabricator</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay.php?3-Lobby&amp;s=4ac05f5719297efbcd825e5dbeceaf36">Lobby</a></li>
+			
+		
+			
+				<li><a href="forumdisplay.php?4-Development-Feedback&amp;s=4ac05f5719297efbcd825e5dbeceaf36">Development Feedback</a></li>
+			
+		
+			
+				<li><a href="forumdisplay.php?9-Development-Logs&amp;s=4ac05f5719297efbcd825e5dbeceaf36">Development Logs</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay.php?11-Development&amp;s=4ac05f5719297efbcd825e5dbeceaf36">Development</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay.php?13-Hardware-Development&amp;s=4ac05f5719297efbcd825e5dbeceaf36">Hardware Development</a></li>
+			
+		
+			
+				<li><a href="forumdisplay.php?14-Software-And-Firmware-Development&amp;s=4ac05f5719297efbcd825e5dbeceaf36">Software And Firmware Development</a></li>
+			
+		
+			
+				<li><a href="forumdisplay.php?12-Plugins-amp-repositories&amp;s=4ac05f5719297efbcd825e5dbeceaf36">Plugins &amp; repositories.</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay.php?8-Community&amp;s=4ac05f5719297efbcd825e5dbeceaf36">Community</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay.php?7-OT-off-topic&amp;s=4ac05f5719297efbcd825e5dbeceaf36">OT: off topic</a></li>
+			
+		
+			
+				<li><a href="forumdisplay.php?6-Forum-and-Websites-Feedback&amp;s=4ac05f5719297efbcd825e5dbeceaf36">Forum and Websites Feedback</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay.php?10-Support&amp;s=4ac05f5719297efbcd825e5dbeceaf36">Support</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay.php?15-Guides-amp-Tutorials&amp;s=4ac05f5719297efbcd825e5dbeceaf36">Guides &amp; Tutorials</a></li>
+			
+		
+			
+				<li><a href="forumdisplay.php?18-3D-Printing&amp;s=4ac05f5719297efbcd825e5dbeceaf36">3D Printing</a></li>
+			
+		
+			
+				<li><a href="forumdisplay.php?20-Milling&amp;s=4ac05f5719297efbcd825e5dbeceaf36">Milling</a></li>
+			
+		
+			
+				<li><a href="forumdisplay.php?21-Scanning&amp;s=4ac05f5719297efbcd825e5dbeceaf36">Scanning</a></li>
+			
+		
+			
+				<li><a href="forumdisplay.php?17-Hardware-Support&amp;s=4ac05f5719297efbcd825e5dbeceaf36">Hardware Support</a></li>
+			
+		
+			
+				<li><a href="forumdisplay.php?16-Software-Support&amp;s=4ac05f5719297efbcd825e5dbeceaf36">Software Support</a></li>
+			
+		
+			
+				<li><a href="forumdisplay.php?5-Billing-amp-Shipping-Support&amp;s=4ac05f5719297efbcd825e5dbeceaf36">Billing &amp; Shipping Support</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+		
+	</ul>
+</div>
+<div class="clear"></div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+	<!-- next / previous links -->
+	<div class="navlinks">
+		
+			<strong>&laquo;</strong>
+			<a href="showthread.php?1305-IGG-Development-update-9-May-26th-2014&amp;s=4ac05f5719297efbcd825e5dbeceaf36&amp;goto=nextoldest" rel="nofollow">Previous Thread</a>
+			|
+			<a href="showthread.php?1305-IGG-Development-update-9-May-26th-2014&amp;s=4ac05f5719297efbcd825e5dbeceaf36&amp;goto=nextnewest" rel="nofollow">Next Thread</a>
+			<strong>&raquo;</strong>
+		
+	</div>
+	<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info block">
+	
+	
+	
+	
+	
+	
+	<div class="options_block_container">
+		
+		<div class="options_block">
+			<h4 class="collapse blockhead options_correct">
+				<a class="collapse" id="collapse_posting_rules" href="showthread.php?1305-igg-development-update-9-may-26th-2014#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+				Posting Permissions
+			</h4>
+			<div id="posting_rules" class="thread_info_block blockbody formcontrols floatcontainer options_correct">
+				
+<div id="forumrules" class="info_subblock">
+
+	<ul class="youcandoblock">
+		<li>You <strong>may not</strong> post new threads</li>
+		<li>You <strong>may not</strong> post replies</li>
+		<li>You <strong>may not</strong> post attachments</li>
+		<li>You <strong>may not</strong> edit your posts</li>
+		<li>&nbsp;</li>
+	</ul>
+	<div class="bbcodeblock">
+		<ul>
+			<li><a href="misc.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=bbcode" target="_blank">BB code</a> is <strong>On</strong></li>
+			<li><a href="misc.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=showsmilies" target="_blank">Smilies</a> are <strong>On</strong></li>
+			<li><a href="misc.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=bbcode#imgcode" target="_blank">[IMG]</a> code is <strong>On</strong></li>
+			<li><a href="misc.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=bbcode#videocode" target="_blank">[VIDEO]</a> code is <strong>On</strong></li>
+			<li>HTML code is <strong>Off</strong></li>
+		</ul>
+	</div>
+	<p class="rules_link"><a href="misc.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;do=showrules" target="_blank">Forum Rules</a></p>
+
+</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<div id="footer" class="floatcontainer footer">
+
+	<form action="forum.php" method="get" id="footer_select" class="footer_select">
+
+		
+		
+		
+	</form>
+
+	<ul id="footer_links" class="footer_links">
+		<li><a href="sendmessage.php?s=4ac05f5719297efbcd825e5dbeceaf36" rel="nofollow" accesskey="9">Contact Us</a></li>
+		
+		
+		
+		<li><a href="archive/index.php?s=4ac05f5719297efbcd825e5dbeceaf36">Archive</a></li>
+		
+		
+		
+		<li><a href="showthread.php?1305-igg-development-update-9-may-26th-2014#top" onclick="document.location.hash='top'; return false;">Top</a></li>
+	</ul>
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+<div id="footer_time" class="shade footer_time">All times are GMT. The time now is <span class="time">10:20 AM</span>.</div>
+
+<div id="footer_copyright" class="shade footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="https://www.vbulletin.com" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.2 <br />Copyright &copy; 2016 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	<img src="http://forum.fabtotum.cc/cron.php?s=4ac05f5719297efbcd825e5dbeceaf36&amp;rand=1457432405" alt="" width="1" height="1" border="0" />
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	
+</div>
+ 
+
+</div>
+</body>
+</html>

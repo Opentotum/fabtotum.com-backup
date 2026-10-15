@@ -1,0 +1,3252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" id="vbulletin_html">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<META NAME=”ROBOTS” CONTENT="NOINDEX,NOFOLLOW">
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="http://forum.fabtotum.cc" />
+<base href="http://forum.fabtotum.cc/" /><!--[if IE]></base><![endif]-->
+<meta name="generator" content="vBulletin 4.2.2" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+	<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+
+
+		<meta name="keywords" content="Development Logs, vbulletin,forum,bbs,discussion,bulletin board" />
+		<meta name="description" content="" />
+
+
+
+
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="clientscript/yui/yuiloader-dom-event/yuiloader-dom-event.js?v=422"><\/script>');
+		document.write('<script type="text/javascript" src="clientscript/yui/connection/connection-min.js?v=422"><\/script>');
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="clientscript/yui/connection/connection-min.js?v=422"><\/script>');
+		}
+	}
+	var SESSIONURL = "s=ca156a2c371ca1e628bba1a70e9335f5&";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "images/misc";
+	var IMGDIR_BUTTON = "images/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "422";
+	var BBURL = "http://forum.fabtotum.cc";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "forumdisplay";
+	var RELPATH = "forumdisplay.php?9-Development-Logs";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "http://forum.fabtotum.cc/";
+// -->
+</script>
+<script type="text/javascript" src="http://forum.fabtotum.cc/clientscript/vbulletin-core.js?v=422"></script>
+
+
+
+
+
+	<link rel="stylesheet" type="text/css" href="css.php?styleid=6&amp;langid=1&amp;d=1440778314&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="css.php?styleid=6&amp;langid=1&amp;d=1440778314&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+
+
+	<title>Development Logs</title>
+	
+	<script type="text/javascript" src="clientscript/vbulletin_read_marker.js?v=422"></script>
+	
+	
+		<link rel="stylesheet" type="text/css" href="css.php?styleid=6&amp;langid=1&amp;d=1440778314&amp;td=ltr&amp;sheet=toolsmenu.css,forumbits.css,forumdisplay.css,threadlist.css,options.css" />
+	
+
+	<!--[if lt IE 8]>
+	<script type="text/javascript" src="clientscript/vbulletin-threadlist-ie.js?v=422"></script>
+		<link rel="stylesheet" type="text/css" href="css.php?styleid=6&amp;langid=1&amp;d=1440778314&amp;td=ltr&amp;sheet=toolsmenu-ie.css,forumbits-ie.css,forumdisplay-ie.css,threadlist-ie.css,options-ie.css" />
+	<![endif]-->
+	<link rel="stylesheet" type="text/css" href="css.php?styleid=6&amp;langid=1&amp;d=1440778314&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+
+<body>
+
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<div id="header" class="floatcontainer doc_header">
+	<div><a name="top" href="forum.php?s=ca156a2c371ca1e628bba1a70e9335f5" class="logo-image"><img src="images/misc/logo.png" alt="Forums - Powered by vBulletin" /></a></div>
+	<div id="toplinks" class="toplinks">
+		
+			<ul class="nouser">
+			
+				<li><a href="register.php?s=ca156a2c371ca1e628bba1a70e9335f5" rel="nofollow">Register</a></li>
+			
+				<li><a rel="help" href="faq.php?s=ca156a2c371ca1e628bba1a70e9335f5">Help</a></li>
+				<li>
+			<script type="text/javascript" src="clientscript/vbulletin_md5.js?v=422"></script>
+			<form id="navbar_loginform" action="login.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset id="logindetails" class="logindetails">
+					<div>
+						<div>
+					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" />
+					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" />
+					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Password" style="display:none;" />
+					<input type="submit" class="loginbutton" tabindex="104" value="Log in" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+						</div>
+					</div>
+				</fieldset>
+				<div id="remember" class="remember">
+					<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" /> Remember Me?</label>
+				</div>
+
+				<input type="hidden" name="s" value="ca156a2c371ca1e628bba1a70e9335f5" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="login" />
+				<input type="hidden" name="vb_login_md5password" />
+				<input type="hidden" name="vb_login_md5password_utf" />
+			</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'User Name')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#000000';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='User Name';
+					textbox.style.color='#777777';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+				</li>
+				
+			</ul>
+		
+	</div>
+	<div class="ad_global_header">
+		
+		
+	</div>
+	<hr />
+</div>
+
+<div id="navbar" class="navbar">
+	<ul id="navtabs" class="navtabs floatcontainer">
+		
+		
+	
+		<li class="selected" id="vbtab_forum">
+			<a class="navtab" href="forum.php?s=ca156a2c371ca1e628bba1a70e9335f5">Forum</a>
+		</li>
+		
+		
+			<ul class="floatcontainer">
+				
+					
+						
+							<li id="vbflink_newposts"><a href="search.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=getnew&amp;contenttype=vBForum_Post">New Posts</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_faq"><a href="faq.php?s=ca156a2c371ca1e628bba1a70e9335f5">FAQ</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_calendar"><a href="calendar.php?s=ca156a2c371ca1e628bba1a70e9335f5">Calendar</a></li>
+						
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_community">
+							<a href="javascript://" class="popupctrl">Community</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbclink_members"><a href="memberlist.php?s=ca156a2c371ca1e628bba1a70e9335f5">Member List</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_actions">
+							<a href="javascript://" class="popupctrl">Forum Actions</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbalink_mfr"><a href="forumdisplay.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=markread&amp;markreadhash=guest">Mark Forums Read</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_qlinks">
+							<a href="javascript://" class="popupctrl">Quick Links</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbqlink_posts"><a href="search.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=getdaily&amp;contenttype=vBForum_Post">Today's Posts</a></li>
+								
+									<li id="vbqlink_leaders"><a href="showgroups.php?s=ca156a2c371ca1e628bba1a70e9335f5">View Site Leaders</a></li>
+								
+							</ul>
+						</li>
+					
+				
+			</ul>
+		
+
+	
+		<li  id="tab_mje3_796">
+			<a class="navtab" href="http://fabtotum.cc">FABtotum Blog</a>
+		</li>
+		
+		
+
+	
+		<li  id="vbtab_whatsnew">
+			<a class="navtab" href="http://forum.fabtotum.cc/search.php?searchid=7850">What's New?</a>
+		</li>
+		
+		
+
+		
+	</ul>
+	
+		<div id="globalsearch" class="globalsearch">
+			<form action="search.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=process" method="post" id="navbar_search" class="navbar_search">
+				
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="process" />
+				<span class="textboxcontainer"><span><input type="text" value="" name="query" class="textbox" tabindex="99"/></span></span>
+				<span class="buttoncontainer"><span><input type="image" class="searchbutton" src="images/buttons/search.png" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"/></span></span>
+			</form>
+			<ul class="navbar_advanced_search">
+				<li><a href="search.php?s=ca156a2c371ca1e628bba1a70e9335f5" accesskey="4">Advanced Search</a></li>
+				
+			</ul>
+		</div>
+	
+</div>
+</div><!-- closing div for above_body -->
+
+<div class="body_wrapper">
+<div id="breadcrumb" class="breadcrumb">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="index.php?s=ca156a2c371ca1e628bba1a70e9335f5" accesskey="1"><img src="images/misc/navbit-home.png" alt="Home" /></a></li>
+		
+	<li class="navbit"><a href="forum.php?s=ca156a2c371ca1e628bba1a70e9335f5">Forum</a></li>
+
+	<li class="navbit"><a href="forumdisplay.php?1-FABtotum-Personal-Fabricator&amp;s=ca156a2c371ca1e628bba1a70e9335f5">FABtotum Personal Fabricator</a></li>
+
+		
+	<li class="navbit lastnavbit"><span>Development Logs</span></li>
+
+	</ul>
+	<hr />
+</div>
+
+
+
+
+
+	<form action="profile.php?do=dismissnotice" method="post" id="notices" class="notices">
+		<input type="hidden" name="do" value="dismissnotice" />
+		<input type="hidden" name="s" value="s=ca156a2c371ca1e628bba1a70e9335f5&amp;" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" id="dismiss_notice_hidden" name="dismiss_noticeid" value="" />
+		<input type="hidden" name="url" value="" />
+		<ol>
+			<li class="restore" id="navbar_notice_1">
+	
+	If this is your first visit, be sure to
+		check out the <a href="faq.php?s=ca156a2c371ca1e628bba1a70e9335f5" target="_blank"><b>FAQ</b></a> by clicking the
+		link above. You may have to <a href="register.php?s=ca156a2c371ca1e628bba1a70e9335f5" target="_blank"><b>register</b></a>
+		before you can post: click the register link above to proceed. To start viewing messages,
+		select the forum that you want to visit from the selection below.
+</li>
+		</ol>
+	</form>
+
+
+
+
+
+<div id="above_threadlist" class="above_threadlist">
+
+	
+	<div class="threadpagenav">
+		<form action="forumdisplay.php?9-Development-Logs/page2&amp;s=ca156a2c371ca1e628bba1a70e9335f5" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="f" value="9" /><input type="hidden" name="s" value="ca156a2c371ca1e628bba1a70e9335f5" />
+	
+		<span><a href="javascript://" class="popupctrl">Page 1 of 2</a></span>
+		
+		
+		
+		<span class="selected"><a href="javascript://" title="Results 1 to 20 of 35">1</a></span><span><a href="forumdisplay.php?9-Development-Logs/page2&amp;s=ca156a2c371ca1e628bba1a70e9335f5" title="Show results 21 to 35 of 35">2</a></span>
+		
+		
+		<span class="prev_next"><a rel="next" href="forumdisplay.php?9-Development-Logs/page2&amp;s=ca156a2c371ca1e628bba1a70e9335f5" title="Next Page - Results 21 to 35 of 35"><img src="images/pagination/next-right.png" alt="Next" /></a></span>
+		
+		
+		<span class="first_last"><a href="forumdisplay.php?9-Development-Logs/page2&amp;s=ca156a2c371ca1e628bba1a70e9335f5" title="Last Page - Results 21 to 35 of 35">Last<img src="images/pagination/last-right.png" alt="Last" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Jump to page: <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Go" /></li>
+	</ul>
+</form>
+		<div id="threadpagestats" class="threadpagestats">Threads 1 to 20 of 35</div>
+	</div>
+	
+</div>
+<div id="pagetitle" class="pagetitle">
+	<h1>Forum: <span class="forumtitle">Development Logs</span></h1>
+	
+</div>
+
+	
+	<div id="above_threadlist_controls" class="above_threadlist_controls toolsmenu">
+		<div>
+		<ul class="popupgroup forumdisplaypopups" id="forumdisplaypopups">
+			<li class="popupmenu nohovermenu" id="forumtools">
+				<h6><a href="javascript://" class="popupctrl" rel="nofollow">Forum Tools</a></h6>
+				<ul class="popupbody popuphover">
+					
+						<li>
+							<a href="forumdisplay.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=markread&amp;f=9&amp;markreadhash=guest" rel="nofollow" onclick="return mark_forum_and_threads_read(9);">
+								Mark This Forum Read
+							</a>
+						</li>
+						
+					<li><a href="forumdisplay.php?1-FABtotum-Personal-Fabricator&amp;s=ca156a2c371ca1e628bba1a70e9335f5" rel="nofollow">View Parent Forum</a></li>
+				</ul>
+			</li>
+                        
+			<li class="popupmenu nohovermenu forumsearch menusearch" id="forumsearch">
+				<h6><a href="javascript://" class="popupctrl">Search Forum</a></h6>
+				<form action="search.php?do=process" method="get">
+				<ul class="popupbody popuphover">
+					<li>
+						<input type="text" class="searchbox" name="q" value="Search..." />
+						<input type="submit" class="button" value="Search" />
+					</li>
+					<li class="formsubmit" id="popupsearch">
+						<div class="submitoptions">
+							<label><input type="radio" name="showposts" value="0" checked="checked" /> Show Threads</label>
+							<label><input type="radio" name="showposts" value="1" /> Show Posts</label>
+						</div>
+						<div class="advancedsearchlink"><a href="search.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;search_type=1&amp;contenttype=vBForum_Post&amp;forumchoice[]=9" rel="nofollow">Advanced Search</a></div>
+
+					</li>
+				</ul>
+				<input type="hidden" name="s" value="ca156a2c371ca1e628bba1a70e9335f5" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="process" />
+				<input type="hidden" name="contenttype" value="vBForum_Post" />
+				<input type="hidden" name="forumchoice[]" value="9" />
+				<input type="hidden" name="childforums" value="1" />
+				<input type="hidden" name="exactname" value="1" />
+				</form>
+			</li>
+			
+
+
+
+		</ul>
+			
+		</div>
+	</div>
+	
+
+
+
+
+
+
+<div id="threadlist" class="threadlist">
+	<form id="thread_inlinemod_form" action="inlinemod.php?forumid=9" method="post">
+		<h2 class="hidden">Threads in This Forum</h2>
+
+		<div>
+			<div class="threadlisthead table">
+				<div>
+				<span class="threadinfo">
+					<span class="threadtitle">
+						<a href="forumdisplay.php?9-Development-Logs&amp;s=ca156a2c371ca1e628bba1a70e9335f5&amp;sort=title&amp;order=asc" rel="nofollow">Title</a> /
+						<a href="forumdisplay.php?9-Development-Logs&amp;s=ca156a2c371ca1e628bba1a70e9335f5&amp;sort=postusername&amp;order=asc" rel="nofollow">Thread Starter</a>
+					</span>
+				</span>
+				
+
+					<span class="threadstats td"><a href="forumdisplay.php?9-Development-Logs&amp;s=ca156a2c371ca1e628bba1a70e9335f5&amp;sort=replycount&amp;order=desc" rel="nofollow">Replies</a> / <a href="forumdisplay.php?9-Development-Logs&amp;s=ca156a2c371ca1e628bba1a70e9335f5&amp;sort=views&amp;order=desc" rel="nofollow">Views</a></span>
+					<span class="threadlastpost td"><a href="forumdisplay.php?9-Development-Logs&amp;s=ca156a2c371ca1e628bba1a70e9335f5&amp;sort=lastpost&amp;order=asc" rel="nofollow">Last Post By<img class="sortarrow" src="images/buttons/sortarrow-asc.png" alt="Reverse Sort Order" border="0" /></a></span>
+					
+				
+				</div>
+			</div>
+
+			
+				<ol id="stickies" class="stickies">
+					<li class="threadbit hot attachments" id="thread_2673">
+	<div class="rating0 sticky">
+		<div class="threadinfo" title="Hello everyone, 
+ 
+As anticipated we are renewing our support system and support procedures to increase responsiveness and reduce waiting times for...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+                            <img src="images/icons/icon1.png" alt="Post" border="0" />
+                    
+
+					
+					 	<img src="images/misc/sticky.gif" alt="Sticky Thread" />
+					
+                                        
+ 					
+						<span id="thread_prefix_2673" class="prefix understate">
+							
+							Sticky: 
+							
+							
+						</span>
+					
+                	<a class="title" href="showthread.php?2673-Notice-Support-system-Update-Nov-3rd-2015&amp;s=ca156a2c371ca1e628bba1a70e9335f5" id="thread_title_2673">[Notice] Support system Update - Nov 3rd, 2015</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member.php?1-Marco&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="username understate" title="Started by Marco on 11-03-2015 12:32 PM">Marco</a>,&nbsp;11-03-2015&nbsp;12:32 PM</span>
+						
+						
+						
+							<dl class="pagination" id="pagination_threadbit_2673">
+								<dt class="label">2 Pages <span class="separator">&bull;</span></dt>
+								<dd>
+									 <span><a href="showthread.php?2673-Notice-Support-system-Update-Nov-3rd-2015&amp;s=ca156a2c371ca1e628bba1a70e9335f5">1</a></span> <span><a href="showthread.php?2673-Notice-Support-system-Update-Nov-3rd-2015/page2&amp;s=ca156a2c371ca1e628bba1a70e9335f5">2</a></span>
+									
+								</dd>
+							</dl>
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+									<a href="javascript://" onclick="attachments(2673); return false"> <img src="images/misc/paperclip.png" border="0" alt="1 Attachment(s)" /></a>
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc.php?do=whoposted&amp;t=2673" onclick="who(2673); return false;" class="understate">19</a></li>
+				<li>Views: 2,304</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?37-wittmason&amp;s=ca156a2c371ca1e628bba1a70e9335f5" title="wittmason is offline"><strong>wittmason</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?37-wittmason&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=finduser&amp;userid=37&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=newpm&amp;u=37" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>12-11-2015, <span class="time">08:14 PM</span>
+			<a href="showthread.php?2673-Notice-Support-system-Update-Nov-3rd-2015&amp;s=ca156a2c371ca1e628bba1a70e9335f5&amp;p=15806#post15806" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.png" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li>
+				</ol>
+			
+			
+				<ol id="threads" class="threads">
+					<li class="threadbit hot attachments" id="thread_3094">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="We are finally ready to share with you the announcement we have been longing for. 
+FABTOTUM starts a new adventure together with Zucchetti Group. 
+...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthread.php?3094-Blog-FABTOTUM-becomes-part-of-Zucchetti-Group&amp;s=ca156a2c371ca1e628bba1a70e9335f5" id="thread_title_3094">[Blog] FABTOTUM becomes part of Zucchetti Group</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member.php?1-Marco&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="username understate" title="Started by Marco on 05-19-2016 03:26 PM">Marco</a>,&nbsp;05-19-2016&nbsp;03:26 PM</span>
+						
+						
+						
+							<dl class="pagination" id="pagination_threadbit_3094">
+								<dt class="label">2 Pages <span class="separator">&bull;</span></dt>
+								<dd>
+									 <span><a href="showthread.php?3094-Blog-FABTOTUM-becomes-part-of-Zucchetti-Group&amp;s=ca156a2c371ca1e628bba1a70e9335f5">1</a></span> <span><a href="showthread.php?3094-Blog-FABTOTUM-becomes-part-of-Zucchetti-Group/page2&amp;s=ca156a2c371ca1e628bba1a70e9335f5">2</a></span>
+									
+								</dd>
+							</dl>
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+									<a href="javascript://" onclick="attachments(3094); return false"> <img src="images/misc/paperclip.png" border="0" alt="1 Attachment(s)" /></a>
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc.php?do=whoposted&amp;t=3094" onclick="who(3094); return false;" class="understate">10</a></li>
+				<li>Views: 1,018</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?39057-24hvayvon&amp;s=ca156a2c371ca1e628bba1a70e9335f5" title="24hvayvon is offline"><strong>24hvayvon</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?39057-24hvayvon&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=finduser&amp;userid=39057&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=newpm&amp;u=39057" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="left">
+			<a href="http://vayvonnganhang24h.vn/" class="siteicon_homepage">
+				Visit Homepage
+			</a>
+		</li>
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>Yesterday, <span class="time">04:44 AM</span>
+			<a href="showthread.php?3094-Blog-FABTOTUM-becomes-part-of-Zucchetti-Group&amp;s=ca156a2c371ca1e628bba1a70e9335f5&amp;p=17717#post17717" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.png" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot attachments" id="thread_2770">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Hello everyone! 
+We’d like to update you on the development of the PRISM module. 
+Keep in mind that nothing is definitive or guaranteed to be part of...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthread.php?2770-PRISM-development-update-30-11-2015&amp;s=ca156a2c371ca1e628bba1a70e9335f5" id="thread_title_2770">PRISM development update  30/11/2015</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member.php?1-Marco&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="username understate" title="Started by Marco on 11-30-2015 02:38 PM">Marco</a>,&nbsp;11-30-2015&nbsp;02:38 PM</span>
+						
+						
+						
+							<dl class="pagination" id="pagination_threadbit_2770">
+								<dt class="label">2 Pages <span class="separator">&bull;</span></dt>
+								<dd>
+									 <span><a href="showthread.php?2770-PRISM-development-update-30-11-2015&amp;s=ca156a2c371ca1e628bba1a70e9335f5">1</a></span> <span><a href="showthread.php?2770-PRISM-development-update-30-11-2015/page2&amp;s=ca156a2c371ca1e628bba1a70e9335f5">2</a></span>
+									
+								</dd>
+							</dl>
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+									<a href="javascript://" onclick="attachments(2770); return false"> <img src="images/misc/paperclip.png" border="0" alt="2 Attachment(s)" /></a>
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc.php?do=whoposted&amp;t=2770" onclick="who(2770); return false;" class="understate">19</a></li>
+				<li>Views: 2,927</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?1311-luke_stanislas&amp;s=ca156a2c371ca1e628bba1a70e9335f5" title="luke_stanislas is offline"><strong>luke_stanislas</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?1311-luke_stanislas&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=finduser&amp;userid=1311&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=newpm&amp;u=1311" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>05-07-2016, <span class="time">11:00 PM</span>
+			<a href="showthread.php?2770-PRISM-development-update-30-11-2015&amp;s=ca156a2c371ca1e628bba1a70e9335f5&amp;p=17264#post17264" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.png" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot attachments" id="thread_2445">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="The FABtotum Personal Fabricator was designed to be a flexible and  expandable platform from day one. Not Just a 3D printer, not Just a  milling...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+                            <img src="images/icons/icon1.png" alt="Post" border="0" />
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthread.php?2445-PRISM-Stereolithography-meets-Multipurpose-Personal-Fabrication&amp;s=ca156a2c371ca1e628bba1a70e9335f5" id="thread_title_2445">PRISM: Stereolithography meets Multipurpose Personal Fabrication</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member.php?1-Marco&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="username understate" title="Started by Marco on 08-24-2015 12:07 PM">Marco</a>,&nbsp;08-24-2015&nbsp;12:07 PM</span>
+						
+						
+						
+							<dl class="pagination" id="pagination_threadbit_2445">
+								<dt class="label">12 Pages <span class="separator">&bull;</span></dt>
+								<dd>
+									 <span><a href="showthread.php?2445-PRISM-Stereolithography-meets-Multipurpose-Personal-Fabrication&amp;s=ca156a2c371ca1e628bba1a70e9335f5">1</a></span> <span><a href="showthread.php?2445-PRISM-Stereolithography-meets-Multipurpose-Personal-Fabrication/page2&amp;s=ca156a2c371ca1e628bba1a70e9335f5">2</a></span> <span><a href="showthread.php?2445-PRISM-Stereolithography-meets-Multipurpose-Personal-Fabrication/page3&amp;s=ca156a2c371ca1e628bba1a70e9335f5">3</a></span>
+									 <span class="separator">...</span> <span><a href="showthread.php?2445-PRISM-Stereolithography-meets-Multipurpose-Personal-Fabrication/page12&amp;s=ca156a2c371ca1e628bba1a70e9335f5">12</a></span>
+								</dd>
+							</dl>
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+									<a href="javascript://" onclick="attachments(2445); return false"> <img src="images/misc/paperclip.png" border="0" alt="5 Attachment(s)" /></a>
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc.php?do=whoposted&amp;t=2445" onclick="who(2445); return false;" class="understate">111</a></li>
+				<li>Views: 12,222</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?1311-luke_stanislas&amp;s=ca156a2c371ca1e628bba1a70e9335f5" title="luke_stanislas is offline"><strong>luke_stanislas</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?1311-luke_stanislas&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=finduser&amp;userid=1311&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=newpm&amp;u=1311" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>05-05-2016, <span class="time">11:19 PM</span>
+			<a href="showthread.php?2445-PRISM-Stereolithography-meets-Multipurpose-Personal-Fabrication&amp;s=ca156a2c371ca1e628bba1a70e9335f5&amp;p=17239#post17239" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.png" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot" id="thread_3068">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="With the introduction of the Development Document,  a precise development  path has been taken. After One year we have  actually completed that...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthread.php?3068-Dev-Blog-Update-FABUI-0-95x-FABtotum-Core-amp-More-4-26-2016&amp;s=ca156a2c371ca1e628bba1a70e9335f5" id="thread_title_3068">Dev Blog Update : FABUI 0.95x, FABtotum Core &amp; More 4/26/2016</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member.php?1-Marco&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="username understate" title="Started by Marco on 04-26-2016 01:34 PM">Marco</a>,&nbsp;04-26-2016&nbsp;01:34 PM</span>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc.php?do=whoposted&amp;t=3068" onclick="who(3068); return false;" class="understate">2</a></li>
+				<li>Views: 574</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?1-Marco&amp;s=ca156a2c371ca1e628bba1a70e9335f5" title="Marco is offline"><strong>Marco</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?1-Marco&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=finduser&amp;userid=1&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=newpm&amp;u=1" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>04-27-2016, <span class="time">04:12 PM</span>
+			<a href="showthread.php?3068-Dev-Blog-Update-FABUI-0-95x-FABtotum-Core-amp-More-4-26-2016&amp;s=ca156a2c371ca1e628bba1a70e9335f5&amp;p=17162#post17162" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.png" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot attachments" id="thread_2932">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Update your unit now : http://my.fabtotum.com/fabui/updates 
+Grab the source here  : https://github.com/FABtotum/FAB-UI">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+                            <img src="images/icons/icon1.png" alt="Post" border="0" />
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthread.php?2932-FABUI-update-0-9499&amp;s=ca156a2c371ca1e628bba1a70e9335f5" id="thread_title_2932">FABUI update 0.9499</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member.php?1-Marco&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="username understate" title="Started by Marco on 01-29-2016 07:47 AM">Marco</a>,&nbsp;01-29-2016&nbsp;07:47 AM</span>
+						
+						
+						
+							<dl class="pagination" id="pagination_threadbit_2932">
+								<dt class="label">2 Pages <span class="separator">&bull;</span></dt>
+								<dd>
+									 <span><a href="showthread.php?2932-FABUI-update-0-9499&amp;s=ca156a2c371ca1e628bba1a70e9335f5">1</a></span> <span><a href="showthread.php?2932-FABUI-update-0-9499/page2&amp;s=ca156a2c371ca1e628bba1a70e9335f5">2</a></span>
+									
+								</dd>
+							</dl>
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+									<a href="javascript://" onclick="attachments(2932); return false"> <img src="images/misc/paperclip.png" border="0" alt="9 Attachment(s)" /></a>
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc.php?do=whoposted&amp;t=2932" onclick="who(2932); return false;" class="understate">13</a></li>
+				<li>Views: 1,975</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username online popupctrl" href="member.php?1385-kino&amp;s=ca156a2c371ca1e628bba1a70e9335f5" title="kino is online now"><strong>kino</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?1385-kino&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=finduser&amp;userid=1385&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=newpm&amp;u=1385" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>04-20-2016, <span class="time">04:39 PM</span>
+			<a href="showthread.php?2932-FABUI-update-0-9499&amp;s=ca156a2c371ca1e628bba1a70e9335f5&amp;p=17033#post17033" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.png" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot" id="thread_1804">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Hi Everyone, 
+Here we are, back with another update. 
+Today we’ll be focusing on production and future plans. 
+ But first lets start off with a...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthread.php?1804-Production-amp-Development-Update-25-Feb-2015&amp;s=ca156a2c371ca1e628bba1a70e9335f5" id="thread_title_1804">Production &amp; Development Update 25 Feb 2015</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member.php?1-Marco&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="username understate" title="Started by Marco on 02-26-2015 08:23 AM">Marco</a>,&nbsp;02-26-2015&nbsp;08:23 AM</span>
+						
+						
+						
+							<dl class="pagination" id="pagination_threadbit_1804">
+								<dt class="label">2 Pages <span class="separator">&bull;</span></dt>
+								<dd>
+									 <span><a href="showthread.php?1804-Production-amp-Development-Update-25-Feb-2015&amp;s=ca156a2c371ca1e628bba1a70e9335f5">1</a></span> <span><a href="showthread.php?1804-Production-amp-Development-Update-25-Feb-2015/page2&amp;s=ca156a2c371ca1e628bba1a70e9335f5">2</a></span>
+									
+								</dd>
+							</dl>
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc.php?do=whoposted&amp;t=1804" onclick="who(1804); return false;" class="understate">19</a></li>
+				<li>Views: 3,312</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?33984-Roseangel41&amp;s=ca156a2c371ca1e628bba1a70e9335f5" title="Roseangel41 is offline"><strong>Roseangel41</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?33984-Roseangel41&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=finduser&amp;userid=33984&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=newpm&amp;u=33984" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>04-20-2016, <span class="time">10:03 AM</span>
+			<a href="showthread.php?1804-Production-amp-Development-Update-25-Feb-2015&amp;s=ca156a2c371ca1e628bba1a70e9335f5&amp;p=17032#post17032" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.png" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot attachments" id="thread_2822">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="A new update is out! 
+ 
+ 
+ 
+  FABUI 0.9495 (23/12/2015)">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthread.php?2822-Software-and-Firmware-update-23-12-2015&amp;s=ca156a2c371ca1e628bba1a70e9335f5" id="thread_title_2822">Software and Firmware update 23/12/2015</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member.php?1-Marco&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="username understate" title="Started by Marco on 12-23-2015 04:49 PM">Marco</a>,&nbsp;12-23-2015&nbsp;04:49 PM</span>
+						
+						
+						
+							<dl class="pagination" id="pagination_threadbit_2822">
+								<dt class="label">7 Pages <span class="separator">&bull;</span></dt>
+								<dd>
+									 <span><a href="showthread.php?2822-Software-and-Firmware-update-23-12-2015&amp;s=ca156a2c371ca1e628bba1a70e9335f5">1</a></span> <span><a href="showthread.php?2822-Software-and-Firmware-update-23-12-2015/page2&amp;s=ca156a2c371ca1e628bba1a70e9335f5">2</a></span> <span><a href="showthread.php?2822-Software-and-Firmware-update-23-12-2015/page3&amp;s=ca156a2c371ca1e628bba1a70e9335f5">3</a></span>
+									 <span class="separator">...</span> <span><a href="showthread.php?2822-Software-and-Firmware-update-23-12-2015/page7&amp;s=ca156a2c371ca1e628bba1a70e9335f5">7</a></span>
+								</dd>
+							</dl>
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+									<a href="javascript://" onclick="attachments(2822); return false"> <img src="images/misc/paperclip.png" border="0" alt="17 Attachment(s)" /></a>
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc.php?do=whoposted&amp;t=2822" onclick="who(2822); return false;" class="understate">61</a></li>
+				<li>Views: 7,969</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?1119-Christopher&amp;s=ca156a2c371ca1e628bba1a70e9335f5" title="Christopher is offline"><strong>Christopher</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?1119-Christopher&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=finduser&amp;userid=1119&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=newpm&amp;u=1119" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>01-10-2016, <span class="time">02:06 PM</span>
+			<a href="showthread.php?2822-Software-and-Firmware-update-23-12-2015&amp;s=ca156a2c371ca1e628bba1a70e9335f5&amp;p=16170#post16170" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.png" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot attachments" id="thread_2328">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Hi guys! After a while we are finally back with some great news: we  worked hard during this last months and we focused, in particular, on  the...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+                            <img src="images/icons/icon1.png" alt="Post" border="0" />
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthread.php?2328-Blogpost-FABtotum-is-getting-upgraded-(July-21st-2015)&amp;s=ca156a2c371ca1e628bba1a70e9335f5" id="thread_title_2328">[Blogpost] FABtotum is getting upgraded. (July 21st 2015)</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member.php?1-Marco&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="username understate" title="Started by Marco on 07-21-2015 07:21 PM">Marco</a>,&nbsp;07-21-2015&nbsp;07:21 PM</span>
+						
+						
+						
+							<dl class="pagination" id="pagination_threadbit_2328">
+								<dt class="label">9 Pages <span class="separator">&bull;</span></dt>
+								<dd>
+									 <span><a href="showthread.php?2328-Blogpost-FABtotum-is-getting-upgraded-(July-21st-2015)&amp;s=ca156a2c371ca1e628bba1a70e9335f5">1</a></span> <span><a href="showthread.php?2328-Blogpost-FABtotum-is-getting-upgraded-(July-21st-2015)/page2&amp;s=ca156a2c371ca1e628bba1a70e9335f5">2</a></span> <span><a href="showthread.php?2328-Blogpost-FABtotum-is-getting-upgraded-(July-21st-2015)/page3&amp;s=ca156a2c371ca1e628bba1a70e9335f5">3</a></span>
+									 <span class="separator">...</span> <span><a href="showthread.php?2328-Blogpost-FABtotum-is-getting-upgraded-(July-21st-2015)/page9&amp;s=ca156a2c371ca1e628bba1a70e9335f5">9</a></span>
+								</dd>
+							</dl>
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+									<a href="javascript://" onclick="attachments(2328); return false"> <img src="images/misc/paperclip.png" border="0" alt="2 Attachment(s)" /></a>
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc.php?do=whoposted&amp;t=2328" onclick="who(2328); return false;" class="understate">85</a></li>
+				<li>Views: 10,397</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?1119-Christopher&amp;s=ca156a2c371ca1e628bba1a70e9335f5" title="Christopher is offline"><strong>Christopher</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?1119-Christopher&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=finduser&amp;userid=1119&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=newpm&amp;u=1119" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>12-28-2015, <span class="time">06:51 PM</span>
+			<a href="showthread.php?2328-Blogpost-FABtotum-is-getting-upgraded-(July-21st-2015)&amp;s=ca156a2c371ca1e628bba1a70e9335f5&amp;p=15989#post15989" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.png" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot attachments" id="thread_2594">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Dear all, 
+ 
+We are closing all the necessary steps to present a  renewed and Upgraded FABtotum Personal Fabricator. We are ready for it!  Constantly...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+                            <img src="images/icons/icon1.png" alt="Post" border="0" />
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthread.php?2594-Blogpost-Phase-2-Rome-wasn-t-built-in-a-day-10-9-2015&amp;s=ca156a2c371ca1e628bba1a70e9335f5" id="thread_title_2594">[Blogpost] Phase 2: Rome wasn't built in a day 10/9/2015</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member.php?1-Marco&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="username understate" title="Started by Marco on 10-09-2015 07:35 PM">Marco</a>,&nbsp;10-09-2015&nbsp;07:35 PM</span>
+						
+						
+						
+							<dl class="pagination" id="pagination_threadbit_2594">
+								<dt class="label">4 Pages <span class="separator">&bull;</span></dt>
+								<dd>
+									 <span><a href="showthread.php?2594-Blogpost-Phase-2-Rome-wasn-t-built-in-a-day-10-9-2015&amp;s=ca156a2c371ca1e628bba1a70e9335f5">1</a></span> <span><a href="showthread.php?2594-Blogpost-Phase-2-Rome-wasn-t-built-in-a-day-10-9-2015/page2&amp;s=ca156a2c371ca1e628bba1a70e9335f5">2</a></span> <span><a href="showthread.php?2594-Blogpost-Phase-2-Rome-wasn-t-built-in-a-day-10-9-2015/page3&amp;s=ca156a2c371ca1e628bba1a70e9335f5">3</a></span>
+									 <span class="separator">...</span> <span><a href="showthread.php?2594-Blogpost-Phase-2-Rome-wasn-t-built-in-a-day-10-9-2015/page4&amp;s=ca156a2c371ca1e628bba1a70e9335f5">4</a></span>
+								</dd>
+							</dl>
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+									<a href="javascript://" onclick="attachments(2594); return false"> <img src="images/misc/paperclip.png" border="0" alt="1 Attachment(s)" /></a>
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc.php?do=whoposted&amp;t=2594" onclick="who(2594); return false;" class="understate">31</a></li>
+				<li>Views: 4,049</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?1231-babou&amp;s=ca156a2c371ca1e628bba1a70e9335f5" title="babou is offline"><strong>babou</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?1231-babou&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=finduser&amp;userid=1231&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=newpm&amp;u=1231" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>12-07-2015, <span class="time">12:43 PM</span>
+			<a href="showthread.php?2594-Blogpost-Phase-2-Rome-wasn-t-built-in-a-day-10-9-2015&amp;s=ca156a2c371ca1e628bba1a70e9335f5&amp;p=15751#post15751" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.png" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot" id="thread_2429">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Hi everyone! 
+ After a short break we are already back with some updates for you.  Expect more in the near future, you’ll hear from us again really...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+                            <img src="images/icons/icon1.png" alt="Post" border="0" />
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthread.php?2429-Blogpost-Sneak-Preview-Hybrid-Head-V2-Laser-Head-and…-8-18-2015&amp;s=ca156a2c371ca1e628bba1a70e9335f5" id="thread_title_2429">[Blogpost] Sneak Preview: Hybrid Head V2, Laser Head and…  8-18-2015</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member.php?1-Marco&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="username understate" title="Started by Marco on 08-19-2015 03:59 PM">Marco</a>,&nbsp;08-19-2015&nbsp;03:59 PM</span>
+						
+						
+						
+							<dl class="pagination" id="pagination_threadbit_2429">
+								<dt class="label">2 Pages <span class="separator">&bull;</span></dt>
+								<dd>
+									 <span><a href="showthread.php?2429-Blogpost-Sneak-Preview-Hybrid-Head-V2-Laser-Head-and…-8-18-2015&amp;s=ca156a2c371ca1e628bba1a70e9335f5">1</a></span> <span><a href="showthread.php?2429-Blogpost-Sneak-Preview-Hybrid-Head-V2-Laser-Head-and…-8-18-2015/page2&amp;s=ca156a2c371ca1e628bba1a70e9335f5">2</a></span>
+									
+								</dd>
+							</dl>
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc.php?do=whoposted&amp;t=2429" onclick="who(2429); return false;" class="understate">17</a></li>
+				<li>Views: 1,973</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?1480-Mark-Trounce&amp;s=ca156a2c371ca1e628bba1a70e9335f5" title="Mark Trounce is offline"><strong>Mark Trounce</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?1480-Mark-Trounce&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=finduser&amp;userid=1480&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=newpm&amp;u=1480" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>09-02-2015, <span class="time">05:04 PM</span>
+			<a href="showthread.php?2429-Blogpost-Sneak-Preview-Hybrid-Head-V2-Laser-Head-and…-8-18-2015&amp;s=ca156a2c371ca1e628bba1a70e9335f5&amp;p=14176#post14176" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.png" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot" id="thread_2048">
+	<div class="rating5 nonsticky">
+		<div class="threadinfo" title="Hi Guys! 
+Today we release a first batch of printable designs that are very usefull to all FABtotum users. 
+These replicable parts will soon be...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+                            <img src="images/icons/icon1.png" alt="Post" border="0" />
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthread.php?2048-blog-Replicable-Parts-amp-Slicing-Profiles&amp;s=ca156a2c371ca1e628bba1a70e9335f5" id="thread_title_2048">[blog] Replicable Parts &amp; Slicing Profiles</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member.php?1-Marco&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="username understate" title="Started by Marco on 05-04-2015 04:50 PM">Marco</a>,&nbsp;05-04-2015&nbsp;04:50 PM</span>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc.php?do=whoposted&amp;t=2048" onclick="who(2048); return false;" class="understate">7</a></li>
+				<li>Views: 2,503</li>
+			
+			<li class="hidden">Rating5 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?1466-SaDiabo&amp;s=ca156a2c371ca1e628bba1a70e9335f5" title="SaDiabo is offline"><strong>SaDiabo</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?1466-SaDiabo&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=finduser&amp;userid=1466&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=newpm&amp;u=1466" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>07-08-2015, <span class="time">10:14 AM</span>
+			<a href="showthread.php?2048-blog-Replicable-Parts-amp-Slicing-Profiles&amp;s=ca156a2c371ca1e628bba1a70e9335f5&amp;p=12558#post12558" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.png" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot attachments" id="thread_1858">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="First FABUI release after the Development Document release, targets some of the topics outlined in the document. 
+Here is the changelog:">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+                            <img src="images/icons/icon1.png" alt="Post" border="0" />
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthread.php?1858-FABUI-0-85-Released-(update-Hotfix-0-875-out)&amp;s=ca156a2c371ca1e628bba1a70e9335f5" id="thread_title_1858">FABUI 0.85 Released (update: Hotfix 0.875 out)</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member.php?1-Marco&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="username understate" title="Started by Marco on 03-13-2015 06:26 PM">Marco</a>,&nbsp;03-13-2015&nbsp;06:26 PM</span>
+						
+						
+						
+							<dl class="pagination" id="pagination_threadbit_1858">
+								<dt class="label">6 Pages <span class="separator">&bull;</span></dt>
+								<dd>
+									 <span><a href="showthread.php?1858-FABUI-0-85-Released-(update-Hotfix-0-875-out)&amp;s=ca156a2c371ca1e628bba1a70e9335f5">1</a></span> <span><a href="showthread.php?1858-FABUI-0-85-Released-(update-Hotfix-0-875-out)/page2&amp;s=ca156a2c371ca1e628bba1a70e9335f5">2</a></span> <span><a href="showthread.php?1858-FABUI-0-85-Released-(update-Hotfix-0-875-out)/page3&amp;s=ca156a2c371ca1e628bba1a70e9335f5">3</a></span>
+									 <span class="separator">...</span> <span><a href="showthread.php?1858-FABUI-0-85-Released-(update-Hotfix-0-875-out)/page6&amp;s=ca156a2c371ca1e628bba1a70e9335f5">6</a></span>
+								</dd>
+							</dl>
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+									<a href="javascript://" onclick="attachments(1858); return false"> <img src="images/misc/paperclip.png" border="0" alt="5 Attachment(s)" /></a>
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc.php?do=whoposted&amp;t=1858" onclick="who(1858); return false;" class="understate">54</a></li>
+				<li>Views: 6,820</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?15-imarin&amp;s=ca156a2c371ca1e628bba1a70e9335f5" title="imarin is offline"><strong>imarin</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?15-imarin&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=finduser&amp;userid=15&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=newpm&amp;u=15" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>03-29-2015, <span class="time">06:34 PM</span>
+			<a href="showthread.php?1858-FABUI-0-85-Released-(update-Hotfix-0-875-out)&amp;s=ca156a2c371ca1e628bba1a70e9335f5&amp;p=9213#post9213" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.png" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot" id="thread_1625">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Dear Backers, 
+Here we are with another update. 
+Currently over 250 FABtotum Personal Fabricators have shipped, and Batch #2 is already well in...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthread.php?1625-Dev-Blog-Entry-Dec-17th-2014-Deliveries-amp-Project-update&amp;s=ca156a2c371ca1e628bba1a70e9335f5" id="thread_title_1625">Dev Blog Entry Dec 17th,  2014 - Deliveries &amp; Project update</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member.php?1-Marco&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="username understate" title="Started by Marco on 12-17-2014 10:18 AM">Marco</a>,&nbsp;12-17-2014&nbsp;10:18 AM</span>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc.php?do=whoposted&amp;t=1625" onclick="who(1625); return false;" class="understate">9</a></li>
+				<li>Views: 2,554</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?1533-gnulio&amp;s=ca156a2c371ca1e628bba1a70e9335f5" title="gnulio is offline"><strong>gnulio</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?1533-gnulio&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=finduser&amp;userid=1533&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=newpm&amp;u=1533" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>02-12-2015, <span class="time">02:31 PM</span>
+			<a href="showthread.php?1625-Dev-Blog-Entry-Dec-17th-2014-Deliveries-amp-Project-update&amp;s=ca156a2c371ca1e628bba1a70e9335f5&amp;p=7540#post7540" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.png" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot attachments" id="thread_1456">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Dear Backers 
+Production is finally growing strong! 
+In  the last month we have been tackling many production annoyances that  held us down. We also...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthread.php?1456-IGG-Log-14-Production-30-Oct-2014&amp;s=ca156a2c371ca1e628bba1a70e9335f5" id="thread_title_1456">IGG: Log #14 : Production, 30 Oct 2014</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member.php?1-Marco&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="username understate" title="Started by Marco on 10-31-2014 10:29 AM">Marco</a>,&nbsp;10-31-2014&nbsp;10:29 AM</span>
+						
+						
+						
+							<dl class="pagination" id="pagination_threadbit_1456">
+								<dt class="label">13 Pages <span class="separator">&bull;</span></dt>
+								<dd>
+									 <span><a href="showthread.php?1456-IGG-Log-14-Production-30-Oct-2014&amp;s=ca156a2c371ca1e628bba1a70e9335f5">1</a></span> <span><a href="showthread.php?1456-IGG-Log-14-Production-30-Oct-2014/page2&amp;s=ca156a2c371ca1e628bba1a70e9335f5">2</a></span> <span><a href="showthread.php?1456-IGG-Log-14-Production-30-Oct-2014/page3&amp;s=ca156a2c371ca1e628bba1a70e9335f5">3</a></span>
+									 <span class="separator">...</span> <span><a href="showthread.php?1456-IGG-Log-14-Production-30-Oct-2014/page13&amp;s=ca156a2c371ca1e628bba1a70e9335f5">13</a></span>
+								</dd>
+							</dl>
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+									<a href="javascript://" onclick="attachments(1456); return false"> <img src="images/misc/paperclip.png" border="0" alt="1 Attachment(s)" /></a>
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc.php?do=whoposted&amp;t=1456" onclick="who(1456); return false;" class="understate">123</a></li>
+				<li>Views: 17,132</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?15-imarin&amp;s=ca156a2c371ca1e628bba1a70e9335f5" title="imarin is offline"><strong>imarin</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?15-imarin&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=finduser&amp;userid=15&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=newpm&amp;u=15" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>12-12-2014, <span class="time">01:40 PM</span>
+			<a href="showthread.php?1456-IGG-Log-14-Production-30-Oct-2014&amp;s=ca156a2c371ca1e628bba1a70e9335f5&amp;p=5579#post5579" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.png" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot" id="thread_1398">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Dear Backers 
+All the Early birds have been shipped and we are now finally shipping units in the First Batch! 
+ 
+During the last weeks we gathered...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+                            <img src="images/icons/icon1.png" alt="Post" border="0" />
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthread.php?1398-IGG-Development-Update-13-30-sept-2014&amp;s=ca156a2c371ca1e628bba1a70e9335f5" id="thread_title_1398">IGG Development Update 13 - 30 sept 2014</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member.php?1-Marco&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="username understate" title="Started by Marco on 09-30-2014 02:35 PM">Marco</a>,&nbsp;09-30-2014&nbsp;02:35 PM</span>
+						
+						
+						
+							<dl class="pagination" id="pagination_threadbit_1398">
+								<dt class="label">2 Pages <span class="separator">&bull;</span></dt>
+								<dd>
+									 <span><a href="showthread.php?1398-IGG-Development-Update-13-30-sept-2014&amp;s=ca156a2c371ca1e628bba1a70e9335f5">1</a></span> <span><a href="showthread.php?1398-IGG-Development-Update-13-30-sept-2014/page2&amp;s=ca156a2c371ca1e628bba1a70e9335f5">2</a></span>
+									
+								</dd>
+							</dl>
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc.php?do=whoposted&amp;t=1398" onclick="who(1398); return false;" class="understate">15</a></li>
+				<li>Views: 3,865</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?175-PaoloP&amp;s=ca156a2c371ca1e628bba1a70e9335f5" title="PaoloP is offline"><strong>PaoloP</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?175-PaoloP&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=finduser&amp;userid=175&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=newpm&amp;u=175" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>10-24-2014, <span class="time">09:38 AM</span>
+			<a href="showthread.php?1398-IGG-Development-Update-13-30-sept-2014&amp;s=ca156a2c371ca1e628bba1a70e9335f5&amp;p=3654#post3654" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.png" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot" id="thread_1387">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Hi guys! 
+ We just came back from the 2014 Word Maker Faire in NYC. 
+ As you may know we jumped in the Faire at the last moment, and we where  able...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+                            <img src="images/icons/icon1.png" alt="Post" border="0" />
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthread.php?1387-Dev-Blog-Entry-Sept-24th-2014-2014-World-Maker-Faire-New-York&amp;s=ca156a2c371ca1e628bba1a70e9335f5" id="thread_title_1387">Dev Blog Entry Sept 24th,  2014: 2014 World Maker Faire New York</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member.php?1-Marco&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="username understate" title="Started by Marco on 09-24-2014 03:13 PM">Marco</a>,&nbsp;09-24-2014&nbsp;03:13 PM</span>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc.php?do=whoposted&amp;t=1387" onclick="who(1387); return false;" class="understate">8</a></li>
+				<li>Views: 2,469</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?1-Marco&amp;s=ca156a2c371ca1e628bba1a70e9335f5" title="Marco is offline"><strong>Marco</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?1-Marco&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=finduser&amp;userid=1&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=newpm&amp;u=1" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>09-25-2014, <span class="time">10:51 PM</span>
+			<a href="showthread.php?1387-Dev-Blog-Entry-Sept-24th-2014-2014-World-Maker-Faire-New-York&amp;s=ca156a2c371ca1e628bba1a70e9335f5&amp;p=3128#post3128" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.png" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot" id="thread_1358">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="What else to say? 
+read more here.">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+                            <img src="images/icons/icon1.png" alt="Post" border="0" />
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthread.php?1358-IGG-Campaign-Update-12-Sept-2nd-2014&amp;s=ca156a2c371ca1e628bba1a70e9335f5" id="thread_title_1358">IGG Campaign Update #12 - Sept. 2nd , 2014</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member.php?1-Marco&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="username understate" title="Started by Marco on 09-02-2014 01:15 PM">Marco</a>,&nbsp;09-02-2014&nbsp;01:15 PM</span>
+						
+						
+						
+							<dl class="pagination" id="pagination_threadbit_1358">
+								<dt class="label">6 Pages <span class="separator">&bull;</span></dt>
+								<dd>
+									 <span><a href="showthread.php?1358-IGG-Campaign-Update-12-Sept-2nd-2014&amp;s=ca156a2c371ca1e628bba1a70e9335f5">1</a></span> <span><a href="showthread.php?1358-IGG-Campaign-Update-12-Sept-2nd-2014/page2&amp;s=ca156a2c371ca1e628bba1a70e9335f5">2</a></span> <span><a href="showthread.php?1358-IGG-Campaign-Update-12-Sept-2nd-2014/page3&amp;s=ca156a2c371ca1e628bba1a70e9335f5">3</a></span>
+									 <span class="separator">...</span> <span><a href="showthread.php?1358-IGG-Campaign-Update-12-Sept-2nd-2014/page6&amp;s=ca156a2c371ca1e628bba1a70e9335f5">6</a></span>
+								</dd>
+							</dl>
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc.php?do=whoposted&amp;t=1358" onclick="who(1358); return false;" class="understate">54</a></li>
+				<li>Views: 10,751</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?1122-geert01&amp;s=ca156a2c371ca1e628bba1a70e9335f5" title="geert01 is offline"><strong>geert01</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?1122-geert01&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=finduser&amp;userid=1122&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=newpm&amp;u=1122" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>09-23-2014, <span class="time">07:48 AM</span>
+			<a href="showthread.php?1358-IGG-Campaign-Update-12-Sept-2nd-2014&amp;s=ca156a2c371ca1e628bba1a70e9335f5&amp;p=3104#post3104" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.png" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot" id="thread_1337">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="As the production is kicking off, we shifted the topic of this blog from  software &amp; hardware development to industrial/production related  topics....">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthread.php?1337-Dev-Blog-Entry-August-16th-2014-Behind-the-scenes-Production-Facility&amp;s=ca156a2c371ca1e628bba1a70e9335f5" id="thread_title_1337">Dev Blog Entry  August 16th,  2014: Behind the scenes: Production Facility</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member.php?1-Marco&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="username understate" title="Started by Marco on 08-16-2014 10:43 AM">Marco</a>,&nbsp;08-16-2014&nbsp;10:43 AM</span>
+						
+						
+						
+							<dl class="pagination" id="pagination_threadbit_1337">
+								<dt class="label">4 Pages <span class="separator">&bull;</span></dt>
+								<dd>
+									 <span><a href="showthread.php?1337-Dev-Blog-Entry-August-16th-2014-Behind-the-scenes-Production-Facility&amp;s=ca156a2c371ca1e628bba1a70e9335f5">1</a></span> <span><a href="showthread.php?1337-Dev-Blog-Entry-August-16th-2014-Behind-the-scenes-Production-Facility/page2&amp;s=ca156a2c371ca1e628bba1a70e9335f5">2</a></span> <span><a href="showthread.php?1337-Dev-Blog-Entry-August-16th-2014-Behind-the-scenes-Production-Facility/page3&amp;s=ca156a2c371ca1e628bba1a70e9335f5">3</a></span>
+									 <span class="separator">...</span> <span><a href="showthread.php?1337-Dev-Blog-Entry-August-16th-2014-Behind-the-scenes-Production-Facility/page4&amp;s=ca156a2c371ca1e628bba1a70e9335f5">4</a></span>
+								</dd>
+							</dl>
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc.php?do=whoposted&amp;t=1337" onclick="who(1337); return false;" class="understate">33</a></li>
+				<li>Views: 7,690</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?59-ipalffy&amp;s=ca156a2c371ca1e628bba1a70e9335f5" title="ipalffy is offline"><strong>ipalffy</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?59-ipalffy&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=finduser&amp;userid=59&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=newpm&amp;u=59" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>09-16-2014, <span class="time">12:31 PM</span>
+			<a href="showthread.php?1337-Dev-Blog-Entry-August-16th-2014-Behind-the-scenes-Production-Facility&amp;s=ca156a2c371ca1e628bba1a70e9335f5&amp;p=3016#post3016" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.png" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot attachments" id="thread_1329">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Campaign Update #11 
+Hello everyone! 
+We have now most of the components in stock!  
+You can check part deliveries from Here.  
+As we depend on...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthread.php?1329-IGG-Development-Update-11-July-31-2014&amp;s=ca156a2c371ca1e628bba1a70e9335f5" id="thread_title_1329">IGG Development Update #11 , July 31,2014</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member.php?1-Marco&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="username understate" title="Started by Marco on 07-30-2014 01:43 PM">Marco</a>,&nbsp;07-30-2014&nbsp;01:43 PM</span>
+						
+						
+						
+							<dl class="pagination" id="pagination_threadbit_1329">
+								<dt class="label">8 Pages <span class="separator">&bull;</span></dt>
+								<dd>
+									 <span><a href="showthread.php?1329-IGG-Development-Update-11-July-31-2014&amp;s=ca156a2c371ca1e628bba1a70e9335f5">1</a></span> <span><a href="showthread.php?1329-IGG-Development-Update-11-July-31-2014/page2&amp;s=ca156a2c371ca1e628bba1a70e9335f5">2</a></span> <span><a href="showthread.php?1329-IGG-Development-Update-11-July-31-2014/page3&amp;s=ca156a2c371ca1e628bba1a70e9335f5">3</a></span>
+									 <span class="separator">...</span> <span><a href="showthread.php?1329-IGG-Development-Update-11-July-31-2014/page8&amp;s=ca156a2c371ca1e628bba1a70e9335f5">8</a></span>
+								</dd>
+							</dl>
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+									<a href="javascript://" onclick="attachments(1329); return false"> <img src="images/misc/paperclip.png" border="0" alt="2 Attachment(s)" /></a>
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc.php?do=whoposted&amp;t=1329" onclick="who(1329); return false;" class="understate">79</a></li>
+				<li>Views: 10,328</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?14-Randy&amp;s=ca156a2c371ca1e628bba1a70e9335f5" title="Randy is offline"><strong>Randy</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?14-Randy&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=finduser&amp;userid=14&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=newpm&amp;u=14" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>09-03-2014, <span class="time">10:47 AM</span>
+			<a href="showthread.php?1329-IGG-Development-Update-11-July-31-2014&amp;s=ca156a2c371ca1e628bba1a70e9335f5&amp;p=2838#post2838" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.png" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot" id="thread_1314">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="How it's made: FABtotum Personal Fabricator 
+ 
+ 
+ 
+The production and release date of the Personal Fabricator has been  pushed back until at least...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+                            <img src="images/icons/icon1.png" alt="Post" border="0" />
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthread.php?1314-Dev-blog-entry-16-June-2014-How-It-s-made-FABtotum-P-F&amp;s=ca156a2c371ca1e628bba1a70e9335f5" id="thread_title_1314">Dev blog entry - 16 June 2014, How It's made: FABtotum P.F.</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member.php?1-Marco&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="username understate" title="Started by Marco on 06-16-2014 01:29 PM">Marco</a>,&nbsp;06-16-2014&nbsp;01:29 PM</span>
+						
+						
+						
+							<dl class="pagination" id="pagination_threadbit_1314">
+								<dt class="label">3 Pages <span class="separator">&bull;</span></dt>
+								<dd>
+									 <span><a href="showthread.php?1314-Dev-blog-entry-16-June-2014-How-It-s-made-FABtotum-P-F&amp;s=ca156a2c371ca1e628bba1a70e9335f5">1</a></span> <span><a href="showthread.php?1314-Dev-blog-entry-16-June-2014-How-It-s-made-FABtotum-P-F/page2&amp;s=ca156a2c371ca1e628bba1a70e9335f5">2</a></span> <span><a href="showthread.php?1314-Dev-blog-entry-16-June-2014-How-It-s-made-FABtotum-P-F/page3&amp;s=ca156a2c371ca1e628bba1a70e9335f5">3</a></span>
+									
+								</dd>
+							</dl>
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc.php?do=whoposted&amp;t=1314" onclick="who(1314); return false;" class="understate">23</a></li>
+				<li>Views: 6,043</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member.php?1363-GerhardKreuzer&amp;s=ca156a2c371ca1e628bba1a70e9335f5" title="GerhardKreuzer is offline"><strong>GerhardKreuzer</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member.php?1363-GerhardKreuzer&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=finduser&amp;userid=1363&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=newpm&amp;u=1363" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>08-23-2014, <span class="time">09:29 PM</span>
+			<a href="showthread.php?1314-Dev-blog-entry-16-June-2014-How-It-s-made-FABtotum-P-F&amp;s=ca156a2c371ca1e628bba1a70e9335f5&amp;p=2740#post2740" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.png" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li>
+				</ol>
+			
+		</div>
+		<hr />
+
+		<div class="noinlinemod forumfoot">
+		
+		</div>
+
+		<input type="hidden" name="url" value="" />
+		<input type="hidden" name="s" value="ca156a2c371ca1e628bba1a70e9335f5" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" name="forumid" value="9" />
+	</form>
+</div>
+
+
+
+<div id="below_threadlist" class="noinlinemod below_threadlist">
+	
+	<div class="threadpagenav">
+		<form action="forumdisplay.php?9-Development-Logs/page2&amp;s=ca156a2c371ca1e628bba1a70e9335f5" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="f" value="9" /><input type="hidden" name="s" value="ca156a2c371ca1e628bba1a70e9335f5" />
+	
+		<span><a href="javascript://" class="popupctrl">Page 1 of 2</a></span>
+		
+		
+		
+		<span class="selected"><a href="javascript://" title="Results 1 to 20 of 35">1</a></span><span><a href="forumdisplay.php?9-Development-Logs/page2&amp;s=ca156a2c371ca1e628bba1a70e9335f5" title="Show results 21 to 35 of 35">2</a></span>
+		
+		
+		<span class="prev_next"><a rel="next" href="forumdisplay.php?9-Development-Logs/page2&amp;s=ca156a2c371ca1e628bba1a70e9335f5" title="Next Page - Results 21 to 35 of 35"><img src="images/pagination/next-right.png" alt="Next" /></a></span>
+		
+		
+		<span class="first_last"><a href="forumdisplay.php?9-Development-Logs/page2&amp;s=ca156a2c371ca1e628bba1a70e9335f5" title="Last Page - Results 21 to 35 of 35">Last<img src="images/pagination/last-right.png" alt="Last" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Jump to page: <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Go" /></li>
+	</ul>
+</form>
+		<div class="clear"></div>
+<div class="navpopupmenu popupmenu nohovermenu" id="forumdisplay_navpopup">
+	
+		<span class="shade">Quick Navigation</span>
+		<a href="forumdisplay.php?9-Development-Logs&amp;s=ca156a2c371ca1e628bba1a70e9335f5" class="popupctrl"><span class="ctrlcontainer">Development Logs</span></a>
+		<a href="forumdisplay.php?9-Development-Logs#top" class="textcontrol" onclick="document.location.hash='top';return false;">Top</a>
+	
+	<ul class="navpopupbody popupbody popuphover">
+		
+		<li class="optionlabel">Site Areas</li>
+		<li><a href="usercp.php?s=ca156a2c371ca1e628bba1a70e9335f5">Settings</a></li>
+		<li><a href="private.php?s=ca156a2c371ca1e628bba1a70e9335f5">Private Messages</a></li>
+		<li><a href="subscription.php?s=ca156a2c371ca1e628bba1a70e9335f5">Subscriptions</a></li>
+		<li><a href="online.php?s=ca156a2c371ca1e628bba1a70e9335f5">Who's Online</a></li>
+		<li><a href="search.php?s=ca156a2c371ca1e628bba1a70e9335f5">Search Forums</a></li>
+		<li><a href="forum.php?s=ca156a2c371ca1e628bba1a70e9335f5">Forums Home</a></li>
+		
+			<li class="optionlabel">Forums</li>
+			
+		
+			
+				<li><a href="forumdisplay.php?1-FABtotum-Personal-Fabricator&amp;s=ca156a2c371ca1e628bba1a70e9335f5">FABtotum Personal Fabricator</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay.php?3-Lobby&amp;s=ca156a2c371ca1e628bba1a70e9335f5">Lobby</a></li>
+			
+		
+			
+				<li><a href="forumdisplay.php?4-Development-Feedback&amp;s=ca156a2c371ca1e628bba1a70e9335f5">Development Feedback</a></li>
+			
+		
+			
+				<li><a href="forumdisplay.php?9-Development-Logs&amp;s=ca156a2c371ca1e628bba1a70e9335f5">Development Logs</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay.php?11-Development&amp;s=ca156a2c371ca1e628bba1a70e9335f5">Development</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay.php?13-Hardware-Development&amp;s=ca156a2c371ca1e628bba1a70e9335f5">Hardware Development</a></li>
+			
+		
+			
+				<li><a href="forumdisplay.php?14-Software-And-Firmware-Development&amp;s=ca156a2c371ca1e628bba1a70e9335f5">Software And Firmware Development</a></li>
+			
+		
+			
+				<li><a href="forumdisplay.php?12-Plugins-amp-repositories&amp;s=ca156a2c371ca1e628bba1a70e9335f5">Plugins &amp; repositories.</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay.php?8-Community&amp;s=ca156a2c371ca1e628bba1a70e9335f5">Community</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay.php?7-OT-off-topic&amp;s=ca156a2c371ca1e628bba1a70e9335f5">OT: off topic</a></li>
+			
+		
+			
+				<li><a href="forumdisplay.php?6-Forum-and-Websites-Feedback&amp;s=ca156a2c371ca1e628bba1a70e9335f5">Forum and Websites Feedback</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay.php?10-Support&amp;s=ca156a2c371ca1e628bba1a70e9335f5">Support</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay.php?15-Guides-amp-Tutorials&amp;s=ca156a2c371ca1e628bba1a70e9335f5">Guides &amp; Tutorials</a></li>
+			
+		
+			
+				<li><a href="forumdisplay.php?18-3D-Printing&amp;s=ca156a2c371ca1e628bba1a70e9335f5">3D Printing</a></li>
+			
+		
+			
+				<li><a href="forumdisplay.php?20-Milling&amp;s=ca156a2c371ca1e628bba1a70e9335f5">Milling</a></li>
+			
+		
+			
+				<li><a href="forumdisplay.php?21-Scanning&amp;s=ca156a2c371ca1e628bba1a70e9335f5">Scanning</a></li>
+			
+		
+			
+				<li><a href="forumdisplay.php?17-Hardware-Support&amp;s=ca156a2c371ca1e628bba1a70e9335f5">Hardware Support</a></li>
+			
+		
+			
+				<li><a href="forumdisplay.php?16-Software-Support&amp;s=ca156a2c371ca1e628bba1a70e9335f5">Software Support</a></li>
+			
+		
+			
+				<li><a href="forumdisplay.php?5-Billing-amp-Shipping-Support&amp;s=ca156a2c371ca1e628bba1a70e9335f5">Billing &amp; Shipping Support</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+		
+	</ul>
+</div>
+<div class="clear"></div>
+	</div>
+</div>
+
+<div id="forum_info_options" class="forum_info block">
+	
+
+	
+	
+
+	<div class="collapse">
+		<a class="collapse" id="collapse_forum_options" href="forumdisplay.php?9-Development-Logs#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+		<h4 class="forumoptiontitle blockhead">Thread Display Options</h4>
+	</div>
+	<div id="forum_options" class="forum_info_form_block">
+		<form id="forum_display_options" action="forumdisplay.php" method="get" class="forum_info_form blockbody formcontrols floatcontainer">
+			<input type="hidden" name="s" value="ca156a2c371ca1e628bba1a70e9335f5" />
+			<input type="hidden" name="f" value="9" />
+			<input type="hidden" name="page" value="1" />
+			<input type="hidden" name="pp" value="20" />
+			<div>
+				<div class="options_input_block">
+					<label for="sel_daysprune">Show threads from the...</label>
+					<select class="primary" id="sel_daysprune" name="daysprune">
+						<option value="1" >Last Day</option>
+						<option value="2" >Last 2 Days</option>
+						<option value="7" >Last Week</option>
+						<option value="10" >Last 10 Days</option>
+						<option value="14" >Last 2 Weeks</option>
+						<option value="30" >Last Month</option>
+						<option value="45" >Last 45 Days</option>
+						<option value="60" >Last 2 Months</option>
+						<option value="75" >Last 75 Days</option>
+						<option value="100" >Last 100 Days</option>
+						<option value="365" >Last Year</option>
+						<option value="-1" selected="selected">Beginning</option>
+					</select>
+					<p class="description">Use this control to limit the display of threads to those newer than the specified time frame.</p>
+				</div>
+				<div class="options_input_block">
+					<label for="sel_sort">Sort threads by:</label>
+					<select class="primary" id="sel_sort" name="sort">
+						<option value="title" >Thread Title</option>
+						<option value="lastpost" selected="selected">Last Post Time</option>
+						<option value="dateline" >Thread Start Time</option>
+						<option value="replycount" >Number of Replies</option>
+						<option value="views" >Number of Views</option>
+						<option value="postusername" >Thread Starter</option>
+						<option value="voteavg" >Thread Rating</option>
+					</select>
+					<p class="description">Allows you to choose the data by which the thread list will be sorted.</p>
+				</div>
+				
+				<!-- Group of Radio Buttons -->
+				<div class="options_input_block">
+					<p class="label">Order threads in...</p>
+					<ul class="checkradio group">
+						<li><label for="radio_asc"><input type="radio" name="order" id="radio_asc" value="asc"  /> Ascending Order</label></li>
+						<li><label for="radio_dsc"><input type="radio" name="order" id="radio_dsc" value="desc" checked="checked" /> Descending Order</label></li>
+					</ul>
+					<p class="description">Note: when sorting by date, 'descending order' will show the newest results first.</p>
+				</div>
+				
+			</div>
+			<div class="options_input_wrapper">
+				<div class="options_input_block">
+					<div class="group">
+						<input type="submit" class="button" value="Show Threads" />
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	
+	<div class="options_block_container">
+	
+		<div class="options_block">
+		<div class="collapse options_correct">
+			<a class="collapse" id="collapse_forum_icon_legend" href="forumdisplay.php?9-Development-Logs#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+			<h4 class="blockhead">Icon Legend</h4>
+		</div>
+		<div id="forum_icon_legend" class="forum_info_block blockbody formcontrols options_correct">
+			<dl id="icon_legends" class="forum_info_subblock icon_legends">
+				<dt><img src="images/statusicon/thread_new-16.png" alt="Contains unread posts" /></dt><dd>Contains unread posts</dd>
+				<dt><img src="images/statusicon/thread-16-right.png" alt="Contains no unread posts" /></dt><dd>Contains no unread posts</dd>
+				
+				<dt><img src="images/statusicon/thread_hot_new-16.png" alt="More than 15 replies or 150 views" /></dt><dd>Hot thread with unread posts</dd>
+				<dt><img src="images/statusicon/thread_hot-16.png" alt="More than 15 replies or 150 views" /></dt><dd>Hot thread with no unread posts</dd>
+				
+				<dt><img src="images/statusicon/thread_lock-16.png" alt="Closed Thread" /></dt><dd>Thread is closed</dd>
+				<dt><img src="images/statusicon/thread_dot-16-right.png" alt="Thread Contains a Message Written By You" /></dt><dd>You have posted in this thread</dd>
+			</dl>
+		</div>
+	</div>
+	<div class="options_block2">
+		<div class="collapse options_correct">
+			<a class="collapse" id="collapse_posting_rules" href="forumdisplay.php?9-Development-Logs#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+			<h4 class="blockhead">Posting Permissions</h4>
+		</div>
+		<div id="posting_rules" class="forum_info_block blockbody formcontrols floatcontainer options_correct">
+			
+<div id="forumrules" class="info_subblock">
+
+	<ul class="youcandoblock">
+		<li>You <strong>may not</strong> post new threads</li>
+		<li>You <strong>may not</strong> post replies</li>
+		<li>You <strong>may not</strong> post attachments</li>
+		<li>You <strong>may not</strong> edit your posts</li>
+		<li>&nbsp;</li>
+	</ul>
+	<div class="bbcodeblock">
+		<ul>
+			<li><a href="misc.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=bbcode" target="_blank">BB code</a> is <strong>On</strong></li>
+			<li><a href="misc.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=showsmilies" target="_blank">Smilies</a> are <strong>On</strong></li>
+			<li><a href="misc.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=bbcode#imgcode" target="_blank">[IMG]</a> code is <strong>On</strong></li>
+			<li><a href="misc.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=bbcode#videocode" target="_blank">[VIDEO]</a> code is <strong>On</strong></li>
+			<li>HTML code is <strong>Off</strong></li>
+		</ul>
+	</div>
+	<p class="rules_link"><a href="misc.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;do=showrules" target="_blank">Forum Rules</a></p>
+
+</div>
+
+		</div>
+	</div>
+	
+	</div>
+</div>
+<script type="text/javascript">
+<!--
+vbphrase['doubleclick_forum_markread'] = "Double-click this icon to mark this forum and its contents as read";
+init_forum_readmarker_system();
+//-->
+</script>
+
+<div id="footer" class="floatcontainer footer">
+
+	<form action="forum.php" method="get" id="footer_select" class="footer_select">
+
+		
+		
+		
+	</form>
+
+	<ul id="footer_links" class="footer_links">
+		<li><a href="sendmessage.php?s=ca156a2c371ca1e628bba1a70e9335f5" rel="nofollow" accesskey="9">Contact Us</a></li>
+		
+		
+		
+		<li><a href="archive/index.php?s=ca156a2c371ca1e628bba1a70e9335f5">Archive</a></li>
+		
+		
+		
+		<li><a href="forumdisplay.php?9-Development-Logs#top" onclick="document.location.hash='top'; return false;">Top</a></li>
+	</ul>
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+<div id="footer_time" class="shade footer_time">All times are GMT. The time now is <span class="time">12:50 AM</span>.</div>
+
+<div id="footer_copyright" class="shade footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="https://www.vbulletin.com" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.2 <br />Copyright &copy; 2016 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	<img src="http://forum.fabtotum.cc/cron.php?s=ca156a2c371ca1e628bba1a70e9335f5&amp;rand=1470444644" alt="" width="1" height="1" border="0" />
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	
+</div>
+ 
+
+</div>
+
+</body>
+</html>
