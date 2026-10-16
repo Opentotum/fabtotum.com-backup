@@ -98,6 +98,8 @@ query strings are omitted.
 
 - **Recovered & Locally Hosted Services:** Official hardware downloads (`material_test_pattern.gcode`, `MakeMore.nc`, `MakeMore.svg`, `TOTUMduino_schematics.pdf`), key DokuWiki knowledgebase pages (`wiki/index.html`, `wiki/open_source.html`, `wiki/versions.html`), and community development logs (`forum/`) have been retrieved from archive.org and are hosted locally, with all site links updated to relative paths.
 - **External Dependencies:** Shop and product checkout links to `store.fabtotum.com` remain directed externally as the store service was not mirrored.
+- **Uncaptured forum UI assets and avatars:** vBulletin interface buttons, smilies, status icons (`forum/images/buttons/`, `forum/images/icons/`, `forum/images/statusicon/`, `forum/images/misc/`), and user avatar endpoints (`forum/image.php`) were not captured in the forum mirror.
+- **Uncaptured DokuWiki template badges:** Template license and footer buttons (`/lib/images/license/`, `/lib/tpl/dokuwiki/images/button-*.png`) are referenced by the DokuWiki footers but were not mirrored.
 - **Video embeds:** YouTube and RAI TV content depends on external providers;
   no local video files were captured. The RAI iframe uses HTTP and may be
   blocked as mixed content when viewing this backup over HTTPS.
